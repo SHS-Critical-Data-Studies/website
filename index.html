@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>A Harry Potter journey</title>
+	<meta name="author" content="Emna Fendri, Stephane Selim and Alessio Verardo">
+	<meta name="description" content="Visualisation of the Harry Potter universe">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="Harry Potter, Visualisation, Vizualisation, Com-480, Data Visualisation">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="js/scrolloverflow.min.js"></script>
+<script src="js/fullpage2.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/d3.min.js"></script>
+<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>-->
+<link rel="stylesheet" href="css/fullpage.min.css">
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/fontawesome.min.css">
+</head>
+<body>
+<div id="wrapper">
+	<div class="section" data-anchor="Title">
+	</div>
+	<div class="section" data-anchor="Introduction">
+		<div class="slide" data-anchor="Introduction-1">
+			<h1>Introduction</h1>
+		</div>
+		<div class="slide" data-anchor="Introduction-2">
+		</div>
+		<div class="slide" data-anchor="Introduction-3">
+		</div>
+		<div class="slide" data-anchor="Introduction-4">
+		</div>
+	</div>
+	<div class="section" data-anchor="Global">
+		<div class="slide" data-anchor="Global-1">
+		</div>
+		<div class="slide" data-anchor="Global-2">
+		</div>
+		<div class="slide" data-anchor="Global-3">
+		</div>
+	</div>
+	<div class="section" data-anchor="NavRun">
+		<div class="slide" data-anchor="NavRun-1">
+		</div>
+		<div class="slide" data-anchor="NavRun-2">
+		</div>
+	</div>
+	<div class="section" data-anchor="NavCluster">
+		<div class="slide" data-anchor="NavCluster-1">
+		</div>
+		<div class="slide" data-anchor="NavCluster-2">
+		</div>
+		<div class="slide" data-anchor="NavCluster-3">
+		</div>
+	</div>
+	<div class="section" data-anchor="About">
+	</div>
+</div>
+
+<script>
+$(document).ready(function(){
+	$('#wrapper').fullpage({
+		anchors: ['Titre', 'Introduction', 'Global','NavRun','NavCluster','About'],
+        sectionsColor: ['black', 'black', 'black', 'black', 'black', 'black'],
+        slidesNavigation: true,
+		navigationPosition:"right",
+		autoScrolling: true,
+		  navigation: true,
+		  showActiveTooltip: true,
+		  slidesNavigation:true,
+		  slidesNavPosition:"bottom",
+		  normalScrollElements: '.modal',
+		  fitToSection:true,
+		  navigationTooltips: [
+        "",
+        "Introduction et stats basiques",
+        "Stats globals",
+        "Exploration des runs",
+        "Exploration des clusters",
+        "About",
+      ],
+      controlArrows:false, 
+      showActiveTooltip:false
+	})
+})
+</script>
+</body>
+</html>
