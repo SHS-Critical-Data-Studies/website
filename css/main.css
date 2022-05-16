@@ -1,4 +1,28 @@
 
 #fp-nav ul li a span, .fp-slidesNav ul li a span{
-	background: white;
+	background: black;
+}
+.section{
+	text-align: center;
+	padding: 50px;
+	
+}
+.content{
+	text-align: justify;
+  	text-justify: inter-word;
+}
+
+.fp-tooltip{
+	color: black!important;
+}
+#wordcloud_div{
+	text-align: center;
+}
+
+#wordcloud_img{
+	width: 600px;
+	height: 400px;
+}
+#displayrun, #wordcloud{
+	width: 40% !important;
 }

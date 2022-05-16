@@ -2,16 +2,15 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>A Harry Potter journey</title>
-	<meta name="author" content="Emna Fendri, Stephane Selim and Alessio Verardo">
-	<meta name="description" content="Visualisation of the Harry Potter universe">
+	<title>Critical Data Studies - Les recommendations YouTube</title>
+	<meta name="author" content="Alessio Verardo, Cyrille Pittet, Hugo Lanfranchi, Noé de Santo, Robin Plumey">
+	<meta name="description" content="Visualisation des recommendations youtube">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="Harry Potter, Visualisation, Vizualisation, Com-480, Data Visualisation">
+	<meta name="keywords" content="recommendations youtube, Visualisation, Vizualisation, SHS, critical data studies, Data Visualisation">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="js/scrolloverflow.min.js"></script>
 <script src="js/fullpage2.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/d3.min.js"></script>
 <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>-->
 <link rel="stylesheet" href="css/fullpage.min.css">
 <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -20,50 +19,182 @@
 </head>
 <body>
 <div id="wrapper">
-	<div class="section" data-anchor="Title">
+	<div class="section col-12" data-anchor="Title">
+		<img src="images/youtube-logo.png">
+		<h1>Où nous emmènent les recommendations YouTube ? </h1>
+		<h3>Alessio Verardo, Cyrille Pittet, Hugo Lanfranchi, Noé de Santo, Robin Plumey</h3>
 	</div>
 	<div class="section" data-anchor="Introduction">
 		<div class="slide" data-anchor="Introduction-1">
-			<h1>Introduction</h1>
+			<div class="content col-12">
+				<h1>Introduction</h1>
+				<!-- explication de la problématique-->
+				Dans une ère où tout devient digital les influences de chaque individu se décuplent avec un accès illimité à l'information. Cet accès aux connaissances dont on ne pourra jamais comprendre l'immensité est-il néanmoins décidé par chaque individu par son accès aux informations, ou alors il y a-t-il un biais externe qui serait responsable des ressources que les individus voient. Lorsque l'on fait une recherche sur un navigateur web, les résultats que l'on voit sont monitorés par l'algorithme de recherche, ils sont dans une certaine mesure régis par le propriétaire, en effet certaines pages web sont mis en avant en fonction de combien d'argent le site web a fourni pour être mis en avant. Alors, l'accès à cet information n'est pas un résultat objectif d'une verité pure d'un accès optimisé à l'information. Cet approche de l'information peut être mise en parallèle avec les bulles de filtres, selon Pariser, elle désigne à la fois le filtrage de l'information qui parvient à l'internaute par différents filtres ; et l'état d'« isolement intellectuel » et culturel dans lequel il se retrouve quand les informations qu'il recherche sur Internet résultent d'une personnalisation mise en place à son insu. Dans notre cas nous nous intéresseront au cas spécifique des bulles de filtre au sein de Youtube. Spécifiquement, est-ce que YouTube nous enferme dans des bulles ? Nous verrons alors si à partir d'un utilisateur lambda, nous arrivons ou apercevoir un comportement de Youtube qui aura tendance à nous proposer du contenu similaire en fonction de ce que l'utilisateur à déjà regardé. Intuitevement cela paraît assez logique, néanmoins dans quelles limites youtube créé-t-il un profil de l'utilisateur et au bout de combien de temps on pourrait dire que youtube nous enferme dans une bulle.
+			</div>
 		</div>
 		<div class="slide" data-anchor="Introduction-2">
+			<div class="content col-12">
+			<!-- Buts des outils-->
+				<h2>Outils et buts</h2>
+				<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une boucle. Pour se faire, nous avons développé un protocole d'expéroence (qui vous sera présenté juste après) dans lequel nous nous laissons guider par l'algorithme de recommendations de YouTube uniquement et regardons où cela nous mène. </p>
+				<p>Sur ce site, nous allons vous proposer divers outils afin de pouvoir naviguer aisément parmi les données récoltées.</p>
+			</div>
 		</div>
 		<div class="slide" data-anchor="Introduction-3">
+			<div class="content col-12">
+			<!-- Explication du protocole -->
+				<h2>Protocole d'expérience</h2>
+				Notre protocole d'expérience le plus récent fonctionne de la manière suivante:
+				<ul>
+					<li>Chaque jour, nous sélectionnons 5 sujets d'actualité différents sur le site <a href="https://news.google.com">Google News</a></li>
+					<li>Pour chacun des sujets, nous faisons une recherche avec un utilisateur vierge et nous sélectionnons 3 vidéos de départ différentes (en termes de nombre de vues)
+					<ul>
+						<li>1 vidéo avec moins de 5'000 vues</li>
+						<li>1 vidéo entre 5'000 et 50'000 vues</li>
+						<li>1 vidéo avec plus de 50'000 vues</li>
+					</ul>
+					<li>Nous laissons ensuite l'utilisateur naviguer en suivant les recommendations durant 4 heures. Il est important de prêter attention aux choix d'implémentation suivants:
+					<ul>
+						<li>L'utilisateur ne regarde aucun live YouTube.</li>
+						<Li>L'utilisateur regarde les vidéos pour une durée maximale de xx minutes.</Li>
+						<li>L'utilisateur choisit une des vidéos proposées par l'algorithme en suivant une distribution de Poisson centrée entre la 2ème et la 3ème vidéo.</li>
+					</ul>
+					</li>
+				</ul>
+			</div>
 		</div>
 		<div class="slide" data-anchor="Introduction-4">
+			<div class="content col-12">
+			<!-- Quelques chiffres -->
+				<h2>Réduction de données</h2>
+				<p>Nous avons récolté un grand nombre de données. A des fins de visualisations, nous avons décidé de restreindre notre analyse sur un sous-ensemble des données. Nous avons décidé de garder les données suivantse</p>
+				<ul>
+					<li>Comme nous prenons les titres de recherches sur un site de news, il arrive que durant plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se limiter à un ensemble de 3 runs par sujet. Ceci a permis de diviser par 2.5 le nombre de runs déjà.</li>
+					<li>Suite à cela, nous avons enlevé les vidéos pour lesquels les tags n'étaient pas défini (comme nous avons besoin de ces derniers pour faire notre analyse) et avons gardé les runs qui ont au moins 10 vidéos.</li>
+				</ul>
+			</div>
 		</div>
 	</div>
 	<div class="section" data-anchor="Global">
 		<div class="slide" data-anchor="Global-1">
+			<div class="content col-12">
+				Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une étude réalisée précédemment (mettre source), il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expérience personnelle, nous avons produit la visualisation suivante afin de voir si cette suggestion était vérifiée ou non. Cette visualisation représente le nombre de vues à travers différentes runs
+				<br>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_views.html"></iframe>
+				A noter que l'axe des odonnées est en échelle logarithmique, ce qui fait que les écarts sont plus grand que ce qu'il n'y paraît. Cependant, nous pouvons remarqué que, selon nos données, cette suggestion ne semble pas se vérifier. De plus, nous pouvons voir que le nombre de vues des vidéos à travers les runs semblent plutôt rester stable voir augmenter plutôt que descendre. On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un nombre de sujets restreints.
+			</div>
 		</div>
 		<div class="slide" data-anchor="Global-2">
+			<div class="content col-12">
+				Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre analyse un peu plus loin et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi des critères d'enfermement. Cette première visualisation nous permet de visualiser la durée des vidéos rencontrées durant les runs pour les différents sujets de notre étude. 
+				<!-- TODO mettre les deux visualisations-->
+				<div class="col-12">
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_video_duration.html"></iframe>
+				</div>
+				On peut remarquer un phénomène similaire au précédent où la durée de la vidéo reste stable voir augmente. On peut remarquer que la durée des vidéos semble plus stable que le nombre de vues.
+			</div>
 		</div>
 		<div class="slide" data-anchor="Global-3">
+			<div class="content col-12">
+				Ici, nous montrons le nombre d'abonnés de la chaîne YouTube à travers les runs
+				<div class="col-12">
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_sub.html"></iframe>
+				</div>
+				Il est intéressant de remarquer que certaines chaînes sont très absorbantes. Dans notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à échapper. Dans nos données, au moins 3 runs sont "bloquées" sur cette chaîne jusqu'à leur terme. A nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propre au créateur de contenu de ces chaînes là.  
+			</div>
 		</div>
 	</div>
+	<div class="section" data-anchor="Topic">
+		<div class="slide" data-anchor="Topic-1">
+			<div class="content col-12">
+				Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic 
+				<div id="wordcloud_div">
+					<select id="wordcloud" class="form-select col-5" onchange="changeWordcloud()">
+						<option value="1">Topic 1 : UK</option>
+						<option value="2">Topic 2 : Morning Show</option>
+						<option value="3">Topic 3 : Sciences</option>
+						<option value="4">Topic 4 : USA</option>
+						<option value="5">Topic 5 : Ukraine-Russia News</option>
+						<option value="6">Topic 6 : International Affairs</option>
+						<option value="7">Topic 7 : Ukraine-Russia war</option>
+						<option value="8">Topic 8 : Music & New York City'</option>
+						<option value="9">Topic 9 : Trevor Noah Show</option>
+						<option value="10">Topic 10 : Business News</option>
+						<option value="11">Topic 11 : Education</option>
+						<option value="12">Topic 12 : Ted Talks</option>
+						<option value="13">Topic 13 : World News</option>
+						<option value="14">Topic 14 : Education</option>
+						<option value="15">Topic 15 : Biathlon (if this makes sense)</option>
+					</select>
+					<h3 id="wordcloud_title">Topic 1 : UK</h3>
+					<img src="images/word_cloud_topic_1.png" id="wordcloud_img">
+				</div>
+
+			</div>
+		</div>
+		<div class="slide" data-anchor="Topic-2">
+			<div class="content col-12">
+				Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans les runs. LDA nous retourne une distribution de probabilités pour les topics de chaque vidéo. Nous avons donc attribué le topic avec la plus grande probabilité à chaque vidéo et nous présentons ensuite l'histogramme du nombre de vidéos dans les topics pour à travers le temps
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_topic_in_video.html"></iframe>
+			</div>
+		</div>
+		<div class="slide" data-anchor="Topic-3">
+			<div class="content col-12">
+				Finalement, comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque run. Le topic choisi pour chaque run est simplement le sujet qui est le plus attribué aux vidéos dans cette run. En d'autres termes, le topic majoritaire dans les vidéos de cette run est attribuée à la run. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de runs par vidéo. 
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
+				L'idée derrière cette visualisation est que si un sujet contient une majorité de run, on pourrait potentiellellement dire que ce sujet est une bulle de filtre. 
+				<!-- inteprétation-->
+			</div>
+		</div>
+		<div class="slide" data-anchor="Topic-4">
+			<div class="content col-12">
+				Pour continuer avec l'idée précédente, nous allons maintenant voir si les topics les plus récurrents dans les runs, les xx, xx et xx, sont effectivement des bulles de filtres, c'est à dire des sujets dont on a du mal à se sortir. Pour se faire, nous proposons l'outil suivant. 
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
+				Chacun des ligne sur l'axe y correspond à une run. L'axe des x correspond à la posistion de la vidéo dans la run. Pour une run donnée, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette vidéo nous permet de voir comment les topics des vidéos au fur et à mesures d'une run. 
+				<!-- TODO interprétation-->
+			</div>
+		</div>
+	</div>
+	
 	<div class="section" data-anchor="NavRun">
 		<div class="slide" data-anchor="NavRun-1">
+			<div class="content col-12">
+				Nous concluons cette exploration interactive avec une visualisation un peu plus complexe à comprendre. Pour des questions de visualisations, nous avons projeté les vecteurs de probabilités des vidéos dans un espace en 2 dimensions avec <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a>. Grâce à cela, nous sommes en mesures de visualiser comment un run se déplace dans l'espace des vidéos. Intuitivement, si celui-ci ne bouge pas beaucoup, cela veut dire que la run reste bloquée dans un certain topic et que nous pouvons considéré ce topic comme une bulle de filtre comme il est très dur d'en sortir. Dans la visualisation ci-dessous, nous montrons simultanémenet les 3 départs différents pour un sujet recherché. Grâce à cela, il nous sera possible de voir si les vidéos plus ou moins vues ont tendance à rester bloquer dans des bulles de filtres ou non. 
+				<select id="displayrun" class="form-select" onchange="changeDisplayRun()">
+					
+				</select>
+				<div id="wordcloud_div" class="col-12">
+					<img src="images/wc1.png" id="wordcloud_img">
+				</div>
+				<!-- TODO visausliation-->
+				Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. 
+				<!-- TODO interprétation-->
+			</div>
 		</div>
 		<div class="slide" data-anchor="NavRun-2">
+			<div class="content col-12"></div>
 		</div>
 	</div>
 	<div class="section" data-anchor="NavCluster">
 		<div class="slide" data-anchor="NavCluster-1">
+			<div class="content col-12"></div>
 		</div>
 		<div class="slide" data-anchor="NavCluster-2">
 		</div>
+		</div>
 		<div class="slide" data-anchor="NavCluster-3">
+			<div class="content col-12"></div>
 		</div>
 	</div>
-	<div class="section" data-anchor="About">
+	<div class="section content col-12" data-anchor="About">
 	</div>
 </div>
 
 <script>
 $(document).ready(function(){
 	$('#wrapper').fullpage({
-		anchors: ['Titre', 'Introduction', 'Global','NavRun','NavCluster','About'],
-        sectionsColor: ['black', 'black', 'black', 'black', 'black', 'black'],
+		anchors: ['Titre', 'Introduction', 'Global','Topic', 'NavRun','NavCluster','About'],
+        sectionsColor: ['rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)'],
         slidesNavigation: true,
 		navigationPosition:"right",
 		autoScrolling: true,
@@ -71,12 +202,12 @@ $(document).ready(function(){
 		  showActiveTooltip: true,
 		  slidesNavigation:true,
 		  slidesNavPosition:"bottom",
-		  normalScrollElements: '.modal',
 		  fitToSection:true,
 		  navigationTooltips: [
-        "",
-        "Introduction et stats basiques",
+        "Accueil",
+        "Introduction",
         "Stats globals",
+        "Exploration des topics",
         "Exploration des runs",
         "Exploration des clusters",
         "About",
@@ -86,5 +217,6 @@ $(document).ready(function(){
 	})
 })
 </script>
+<script src="js/custom.js"></script>
 </body>
 </html>
