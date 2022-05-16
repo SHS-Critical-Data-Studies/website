@@ -38,6 +38,7 @@
 				<h2>Outils et buts</h2>
 				<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une boucle. Pour se faire, nous avons développé un protocole d'expéroence (qui vous sera présenté juste après) dans lequel nous nous laissons guider par l'algorithme de recommendations de YouTube uniquement et regardons où cela nous mène. </p>
 				<p>Sur ce site, nous allons vous proposer divers outils afin de pouvoir naviguer aisément parmi les données récoltées.</p>
+				<p>A travers le site, nous utiliserons le mot <b>topic</b> pour désigner les sujets auxquels on s'intéresse. De la même manière, nous allons utiliser le mot <b>run</b> pour désigner un trajet complet en se laissant guider par l'algorithme de recommendations YouTube.</p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Introduction-3">
@@ -107,7 +108,7 @@
 	<div class="section" data-anchor="Topic">
 		<div class="slide" data-anchor="Topic-1">
 			<div class="content col-12">
-				Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic 
+				Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.
 				<div id="wordcloud_div">
 					<select id="wordcloud" class="form-select col-5" onchange="changeWordcloud()">
 						<option value="1">Topic 1 : UK</option>
@@ -129,13 +130,14 @@
 					<h3 id="wordcloud_title">Topic 1 : UK</h3>
 					<img src="images/word_cloud_topic_1.png" id="wordcloud_img">
 				</div>
-
+				Comme cette technique est basée sur du Machine Learning, elle n'est pas forcément fiable à 100% et certains mots pour lesquelles l'algorithme trouve des similarités n'ont peut-être aucun, voir très peu de sens pour les humains. Nous pouvons voir des exemples de topics pour lesquelles cela fonctionne très bien, comme les topics 5, 9 ou 12. On peut également trouver des exemples pour lesquels l'algorithme ne fonctionne pas, par exemple le topic 15. Néanmoins, nous sommes plutôt content du résultat. 
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-2">
 			<div class="content col-12">
-				Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans les runs. LDA nous retourne une distribution de probabilités pour les topics de chaque vidéo. Nous avons donc attribué le topic avec la plus grande probabilité à chaque vidéo et nous présentons ensuite l'histogramme du nombre de vidéos dans les topics pour à travers le temps
+				Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans le temps. LDA attribue une distribution de probabilités sur les topics pour chaque vidéo. Par la suite, nous avons attribué le topic avec la plus grande vidéo pour chaque vidéo comme étant son topic principal. Nous vous présentons à présent l'histogramme de nombre de vidéo par topic à chaque instant à travers les runs. C'est à dire que nous montrons l'histogramme du nombre de vidéos par topic en ne considérant que les premières vidéos de chaque run, puis les secondes, puis les troisièmes, etc....<br>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_topic_in_video.html"></iframe>
+				Afin de démontrer l'existence de grosses bulles de filtres, nous aurions espérer qu'un ou plusieurs topics allaient accumuler un grand nombre de vidéo au fur et à mesure que le temps avance. Malheureusement, on peut voir que dans nos données on ne voit malheureusment pas ce genre de comportement. Nous allons donc exploré plus en détails ce qui se passe dans chaque run dans la prochaine section du site afin de voir si certains des topics sont réellement des bulles de filtres ou non.
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-3">
@@ -161,11 +163,19 @@
 			<div class="content col-12">
 				Nous concluons cette exploration interactive avec une visualisation un peu plus complexe à comprendre. Pour des questions de visualisations, nous avons projeté les vecteurs de probabilités des vidéos dans un espace en 2 dimensions avec <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a>. Grâce à cela, nous sommes en mesures de visualiser comment un run se déplace dans l'espace des vidéos. Intuitivement, si celui-ci ne bouge pas beaucoup, cela veut dire que la run reste bloquée dans un certain topic et que nous pouvons considéré ce topic comme une bulle de filtre comme il est très dur d'en sortir. Dans la visualisation ci-dessous, nous montrons simultanémenet les 3 départs différents pour un sujet recherché. Grâce à cela, il nous sera possible de voir si les vidéos plus ou moins vues ont tendance à rester bloquer dans des bulles de filtres ou non. 
 				<select id="displayrun" class="form-select" onchange="changeDisplayRun()">
-					
+					<option value="3 Americans Bahamas">3 Americans Bahamas</option>
+					<option value="300 Zelenskyy more than">300 Zelenskyy more than</option>
+					<option value="Beijing Hong John Kong's Le">Beijing Hong John Kong's Le</option>
+					<option value="Biden First Jill Ukraine">Biden First Jill Ukraine</option>
+					<option value="Break Forces Mariupol Resistance Russian To Try Ukrainian">Break Forces Mariupol Resistance Russian To Try Ukrainian</option>
+					<option value="Charles Opening Parliament Queen's Takes of">Charles Opening Parliament Queen's Takes of</option>
+					<option value="EU Russian">EU Russian</option>
+					<option value="Fein Ireland Irish Northern Sinn">Fein Ireland Irish Northern Sinn</option>
+					<option value="Korea North">Korea North</option>
+					<option value="Mariupol Zaporizhzhia">Mariupol Zaporizhzhia</option>
+					<option value="Russia">Russia</option>
 				</select>
-				<div id="wordcloud_div" class="col-12">
-					<img src="images/wc1.png" id="wordcloud_img">
-				</div>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3 Americans Bahamas.html" id="explore"></iframe>
 				<!-- TODO visausliation-->
 				Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. 
 				<!-- TODO interprétation-->

@@ -8,6 +8,6 @@ function changeWordcloud(){
 
 function changeDisplayRun(){
 	var val = $("#displayrun").val()
-	$("#wordcloud_img").attr("src", "images/wc"+val+".png") 
+	$("#explore").attr("src", "viz/p5_category_first_video_theme_0:"+val+".html") 
 
 }
