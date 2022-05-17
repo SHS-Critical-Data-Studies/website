@@ -133,24 +133,24 @@
 				Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.
 				<div id="wordcloud_div">
 					<select id="wordcloud" class="form-select col-5" onchange="changeWordcloud()">
-						<option value="1">Topic 1 : UK</option>
-						<option value="2">Topic 2 : Morning Show</option>
-						<option value="3">Topic 3 : Sciences</option>
-						<option value="4">Topic 4 : USA</option>
+						<option value="1">Topic 1 : International Affairs on Nuclear</option>
+						<option value="2">Topic 2 : World News</option>
+						<option value="3">Topic 3 : Documentaries on World Crisis</option>
+						<option value="4">Topic 4 : News</option>
 						<option value="5">Topic 5 : Ukraine-Russia News</option>
-						<option value="6">Topic 6 : International Affairs</option>
-						<option value="7">Topic 7 : Ukraine-Russia war</option>
-						<option value="8">Topic 8 : Music & New York City'</option>
-						<option value="9">Topic 9 : Trevor Noah Show</option>
-						<option value="10">Topic 10 : Business News</option>
+						<option value="6">Topic 6 : Ted Talks</option>
+						<option value="7">Topic 7 : Johnny Depp-Amber Heards</option>
+						<option value="8">Topic 8 : Health</option>
+						<option value="9">Topic 9 : White House</option>
+						<option value="10">Topic 10 : Music</option>
 						<option value="11">Topic 11 : Education</option>
-						<option value="12">Topic 12 : Ted Talks</option>
-						<option value="13">Topic 13 : World News</option>
-						<option value="14">Topic 14 : Education</option>
-						<option value="15">Topic 15 : Biathlon (if this makes sense)</option>
+						<option value="12">Topic 12 : Politics</option>
+						<option value="13">Topic 13 : Noah Trevor</option>
+						<option value="14">Topic 14 : Morning News</option>
+						<option value="15">Topic 15 : Rathee Dhruv</option>
 					</select>
-					<h3 id="wordcloud_title">Topic 1 : UK</h3>
-					<img src="images/word_cloud_topic_1.png" id="wordcloud_img">
+					<h3 id="wordcloud_title">Topic 1 : International Affairs on Nuclear</h3>
+					<img src="images/word_cloud_topic_0.png" id="wordcloud_img">
 				</div>
 				Comme cette technique est basée sur du Machine Learning, elle n'est pas dépourvue de failles et certains mots pour lesquels l'algorithme trouve des similarités n'ont peut-être aucun, voir très peu de sens pour les humains. Nous pouvons voir des exemples de topics pour lesquelles cela fonctionne très bien, comme les topics 5, 9 ou 12. On peut également trouver des exemples pour lesquels l'algorithme ne fonctionne pas, par exemple le topic 15. Néanmoins, nous sommes plutôt content du résultat. 
 			</div>
