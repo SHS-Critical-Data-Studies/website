@@ -29,16 +29,16 @@
 			<div class="content col-12">
 				<h1>Introduction</h1>
 				<!-- explication de la problématique-->
-				Dans une ère où tout devient digital les influences de chaque individu se décuplent avec un accès illimité à l'information. Cet accès aux connaissances dont on ne pourra jamais comprendre l'immensité est-il néanmoins décidé par chaque individu par son accès aux informations, ou alors il y a-t-il un biais externe qui serait responsable des ressources que les individus voient. Lorsque l'on fait une recherche sur un navigateur web, les résultats que l'on voit sont monitorés par l'algorithme de recherche, ils sont dans une certaine mesure régis par le propriétaire, en effet certaines pages web sont mis en avant en fonction de combien d'argent le site web a fourni pour être mis en avant. Alors, l'accès à cet information n'est pas un résultat objectif d'une verité pure d'un accès optimisé à l'information. Cet approche de l'information peut être mise en parallèle avec les bulles de filtres, selon Pariser, elle désigne à la fois le filtrage de l'information qui parvient à l'internaute par différents filtres ; et l'état d'« isolement intellectuel » et culturel dans lequel il se retrouve quand les informations qu'il recherche sur Internet résultent d'une personnalisation mise en place à son insu. Dans notre cas nous nous intéresseront au cas spécifique des bulles de filtre au sein de Youtube. Spécifiquement, est-ce que YouTube nous enferme dans des bulles ? Nous verrons alors si à partir d'un utilisateur lambda, nous arrivons ou apercevoir un comportement de Youtube qui aura tendance à nous proposer du contenu similaire en fonction de ce que l'utilisateur à déjà regardé. Intuitevement cela paraît assez logique, néanmoins dans quelles limites youtube créé-t-il un profil de l'utilisateur et au bout de combien de temps on pourrait dire que youtube nous enferme dans une bulle.
+				Dans une ère où tout devient numérique les influences de chaque individu se décuplent avec un accès illimité à l'information. Cet accès aux connaissances dont on ne pourra jamais comprendre l'immensité est-il néanmoins décidé par chaque individu par son accès aux informations, ou alors il y a-t-il un biais externe qui serait responsable des ressources que les individus voient. Lorsque l'on fait une recherche sur un navigateur web, les résultats que l'on voit sont monitorés par l'algorithme de recherche, ils sont dans une certaine mesure régis par le propriétaire, en effet certaines pages web sont mis en avant en fonction de combien d'argent le site web a fourni pour être mis en avant. Alors, l'accès à cet information n'est pas un résultat objectif d'une verité pure d'un accès optimisé à l'information. Cet approche de l'information peut être mise en parallèle avec les bulles de filtres, selon Pariser, elle désigne à la fois le filtrage de l'information qui parvient à l'internaute par différents filtres ; et l'état d'« isolement intellectuel » et culturel dans lequel il se retrouve quand les informations qu'il recherche sur Internet résultent d'une personnalisation mise en place à son insu. Dans notre cas nous nous intéresseront au cas spécifique des bulles de filtre au sein de Youtube. Spécifiquement, est-ce que YouTube nous enferme dans des bulles ? Nous verrons alors si à partir d'un utilisateur lambda, nous arrivons ou apercevoir un comportement de Youtube qui aura tendance à nous proposer du contenu similaire en fonction de ce que l'utilisateur à déjà regardé. Intuitevement cela paraît assez logique, néanmoins dans quelles limites youtube créé-t-il un profil de l'utilisateur et au bout de combien de temps on pourrait dire que youtube nous enferme dans une bulle.
 			</div>
 		</div>
 		<div class="slide" data-anchor="Introduction-2">
 			<div class="content col-12">
 			<!-- Buts des outils-->
 				<h2>Outils et buts</h2>
-				<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une boucle. Pour se faire, nous avons développé un protocole d'expéroence (qui vous sera présenté juste après) dans lequel nous nous laissons guider par l'algorithme de recommendations de YouTube uniquement et regardons où cela nous mène. </p>
-				<p>Sur ce site, nous allons vous proposer divers outils afin de pouvoir naviguer aisément parmi les données récoltées.</p>
-				<p>A travers le site, nous utiliserons le mot <b>topic</b> pour désigner les sujets auxquels on s'intéresse. De la même manière, nous allons utiliser le mot <b>run</b> pour désigner un trajet complet en se laissant guider par l'algorithme de recommendations YouTube.</p>
+				<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une boucle. Pour se faire, nous avons développé un protocole d'expérience (décrit par la suite) dans lequel nous nous laissons guider par l'algorithme de recommendations de YouTube et obeservons où cela nous mène. </p>
+				<p>Sur ce site, nous proposons divers outils afin de pouvoir naviguer aisément parmi les données récoltées.</p>
+				<p>Dans nos expériences, nous avons utilisé le mot <b>topic</b> pour désigner les sujets auxquels on s'intéresse. De la même manière, nous avons utilisé le mot <b>run</b> pour désigner un trajet complet en se laissant guider par l'algorithme de recommendations YouTube.</p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Introduction-3">
@@ -57,7 +57,7 @@
 					<li>Nous laissons ensuite l'utilisateur naviguer en suivant les recommendations durant 4 heures. Il est important de prêter attention aux choix d'implémentation suivants:
 					<ul>
 						<li>L'utilisateur ne regarde aucun live YouTube.</li>
-						<Li>L'utilisateur regarde les vidéos pour une durée maximale de xx minutes.</Li>
+						<Li>L'utilisateur regarde les vidéos pendant une durée maximale de xx minutes.</Li>
 						<li>L'utilisateur choisit une des vidéos proposées par l'algorithme en suivant une distribution de Poisson centrée entre la 2ème et la 3ème vidéo.</li>
 					</ul>
 					</li>
@@ -68,10 +68,24 @@
 			<div class="content col-12">
 			<!-- Quelques chiffres -->
 				<h2>Réduction de données</h2>
-				<p>Nous avons récolté un grand nombre de données. A des fins de visualisations, nous avons décidé de restreindre notre analyse sur un sous-ensemble des données. Nous avons décidé de garder les données suivantse</p>
+				Les données suivantes ont été collectées:
 				<ul>
-					<li>Comme nous prenons les titres de recherches sur un site de news, il arrive que durant plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se limiter à un ensemble de 3 runs par sujet. Ceci a permis de diviser par 2.5 le nombre de runs déjà.</li>
-					<li>Suite à cela, nous avons enlevé les vidéos pour lesquels les tags n'étaient pas défini (comme nous avons besoin de ces derniers pour faire notre analyse) et avons gardé les runs qui ont au moins 10 vidéos.</li>
+					<li>Titre</li>
+					<li>URL de la vidéo</li>
+					<li>URL (+nom) de la chaîne</li>
+					<li>Description</li>
+					<li>Tags</li>
+					<li>Commentaires (si pas désactivé) [100 premiers]</li>
+					<ul>
+						<li>Posteur (nom + url)</li>
+						<li>Contenu (texte)</li>
+						<li>Likes (nombre)</li>
+					</ul>
+				</ul>
+				<p>Comme nous avons récolté un grand nombre de données lors du scraping, pour obtenir des visualisations pertinentes, nous avons décidé de restreindre notre analyse à un sous-ensemble des données. Nous avons opté pour garder les données suivantes:</p>
+				<ul>
+					<li>Comme nous prenons les titres des recherches sur un site de news, il arrive que durant plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se limiter à un ensemble de 3 runs par sujet. Ceci a permis de diviser par 2.5 le nombre de runs.</li>
+					<li>Suite à cela, nous avons enlevé les vidéos pour lesquelles les tags n'étaient pas définis (en effet nous avons besoin de ces derniers pour faire notre analyse) et avons uniquemment gardé les runs qui ont au moins 10 vidéos.</li>
 				</ul>
 			</div>
 		</div>
@@ -79,15 +93,15 @@
 	<div class="section" data-anchor="Global">
 		<div class="slide" data-anchor="Global-1">
 			<div class="content col-12">
-				Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une étude réalisée précédemment (mettre source), il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expérience personnelle, nous avons produit la visualisation suivante afin de voir si cette suggestion était vérifiée ou non. Cette visualisation représente le nombre de vues à travers différentes runs
+				Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une étude réalisée précédemment (mettre source), il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expériences personnelles, nous avons produit la visualisation suivante afin de vérifier si cette suggestion était encore d'actualité. Cette visualisation représente le nombre de vues à travers différentes runs.
 				<br>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_views.html"></iframe>
-				A noter que l'axe des odonnées est en échelle logarithmique, ce qui fait que les écarts sont plus grand que ce qu'il n'y paraît. Cependant, nous pouvons remarqué que, selon nos données, cette suggestion ne semble pas se vérifier. De plus, nous pouvons voir que le nombre de vues des vidéos à travers les runs semblent plutôt rester stable voir augmenter plutôt que descendre. On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un nombre de sujets restreints.
+				A noter que l'axe des ordonnées est en échelle logarithmique, ce qui fait que les écarts sont plus grand que ce qu'il n'y paraît. Néanmoins, selon nos données, nous pouvons remarquer que Youtube n'a pas tendance à recommander des vidéos qui ont plus ou moins le même nombre de vues, contredisant la suggestion précédente. De plus, nous pouvons observer que le nombre de vues des vidéos à travers les runs semblent plutôt rester stable voir augmenter plutôt que descendre. On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un nombre de sujets restreints.
 			</div>
 		</div>
 		<div class="slide" data-anchor="Global-2">
 			<div class="content col-12">
-				Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre analyse un peu plus loin et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi des critères d'enfermement. Cette première visualisation nous permet de visualiser la durée des vidéos rencontrées durant les runs pour les différents sujets de notre étude. 
+				Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre analyse et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi des critères d'encloisonnement. Cette première visualisation nous permet de visualiser la durée des vidéos rencontrées durant les runs pour les différents sujets de notre étude. 
 				<!-- TODO mettre les deux visualisations-->
 				<div class="col-12">
 					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_video_duration.html"></iframe>
@@ -97,11 +111,11 @@
 		</div>
 		<div class="slide" data-anchor="Global-3">
 			<div class="content col-12">
-				Ici, nous montrons le nombre d'abonnés de la chaîne YouTube à travers les runs
+				Ici, nous présentons le nombre d'abonnés de la chaîne YouTube à travers les runs.
 				<div class="col-12">
 					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_sub.html"></iframe>
 				</div>
-				Il est intéressant de remarquer que certaines chaînes sont très absorbantes. Dans notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à échapper. Dans nos données, au moins 3 runs sont "bloquées" sur cette chaîne jusqu'à leur terme. A nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propre au créateur de contenu de ces chaînes là.  
+				Il est intéressant de remarquer que certaines chaînes sont très absorbantes. De notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à s'échapper. Dans nos données, au moins 3 runs sont "enfermées" sur cette chaîne jusqu'à leur fin. A nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propres au créateur de contenu de ces chaînes là.  
 			</div>
 		</div>
 	</div>
