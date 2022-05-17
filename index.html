@@ -163,19 +163,17 @@
 			<div class="content col-12">
 				Nous concluons cette exploration interactive avec une visualisation un peu plus complexe à comprendre. Pour des questions de visualisations, nous avons projeté les vecteurs de probabilités des vidéos dans un espace en 2 dimensions avec <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a>. Grâce à cela, nous sommes en mesures de visualiser comment un run se déplace dans l'espace des vidéos. Intuitivement, si celui-ci ne bouge pas beaucoup, cela veut dire que la run reste bloquée dans un certain topic et que nous pouvons considéré ce topic comme une bulle de filtre comme il est très dur d'en sortir. Dans la visualisation ci-dessous, nous montrons simultanémenet les 3 départs différents pour un sujet recherché. Grâce à cela, il nous sera possible de voir si les vidéos plus ou moins vues ont tendance à rester bloquer dans des bulles de filtres ou non. 
 				<select id="displayrun" class="form-select" onchange="changeDisplayRun()">
-					<option value="3 Americans Bahamas">3 Americans Bahamas</option>
-					<option value="300 Zelenskyy more than">300 Zelenskyy more than</option>
-					<option value="Beijing Hong John Kong's Le">Beijing Hong John Kong's Le</option>
-					<option value="Biden First Jill Ukraine">Biden First Jill Ukraine</option>
-					<option value="Break Forces Mariupol Resistance Russian To Try Ukrainian">Break Forces Mariupol Resistance Russian To Try Ukrainian</option>
-					<option value="Charles Opening Parliament Queen's Takes of">Charles Opening Parliament Queen's Takes of</option>
-					<option value="EU Russian">EU Russian</option>
-					<option value="Fein Ireland Irish Northern Sinn">Fein Ireland Irish Northern Sinn</option>
-					<option value="Korea North">Korea North</option>
-					<option value="Mariupol Zaporizhzhia">Mariupol Zaporizhzhia</option>
+					<option value="3_Americans_Bahamas">3 Americans Bahamas</option>
+					<option value="Biden_First_Jill_Ukraine">Biden First Jill Ukraine</option>
+					<option value="Beijing_Hong_John_Kong's_Lee">Beijing Hong John Kong's Le</option>
+					<option value="Break_Forces_Mariupol_Resistance_Russian_To_Try_Ukrainian">Break Forces Mariupol Resistance Russian To Try Ukrainian</option>
+					<option value="Charles_Opening_Parliament_Queen's_Takes_of">Charles Opening Parliament Queen's Takes of</option>
+					<option value="EU_Russian">EU Russian</option>
+					<option value="Korea_North">Korea North</option>
+					<option value="Mariupol_Zaporizhzhia">Mariupol Zaporizhzhia</option>
 					<option value="Russia">Russia</option>
 				</select>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3 Americans Bahamas.html" id="explore"></iframe>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3_Americans_Bahamas.html" id="explore"></iframe>
 				<!-- TODO visausliation-->
 				Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. 
 				<!-- TODO interprétation-->
