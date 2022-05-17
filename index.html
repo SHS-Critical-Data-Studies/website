@@ -29,7 +29,7 @@
 			<div class="content col-12">
 				<h1>Introduction</h1>
 				<!-- explication de la problématique-->
-				Dans une ère où tout devient digital les influences de chaque individu se décuplent avec un accès illimité à l'information. Cet accès aux connaissances dont on ne pourra jamais comprendre l'immensité est-il néanmoins décidé par chaque individu par son accès aux informations, ou alors il y a-t-il un biais externe qui serait responsable des ressources que les individus voient. Lorsque l'on fait une recherche sur un navigateur web, les résultats que l'on voit sont monitorés par l'algorithme de recherche, ils sont dans une certaine mesure régis par le propriétaire, en effet certaines pages web sont mis en avant en fonction de combien d'argent le site web a fourni pour être mis en avant. Alors, l'accès à cet information n'est pas un résultat objectif d'une verité pure d'un accès optimisé à l'information. Cet approche de l'information peut être mise en parallèle avec les bulles de filtres, selon Pariser, elle désigne à la fois le filtrage de l'information qui parvient à l'internaute par différents filtres ; et l'état d'« isolement intellectuel » et culturel dans lequel il se retrouve quand les informations qu'il recherche sur Internet résultent d'une personnalisation mise en place à son insu. Dans notre cas nous nous intéresseront au cas spécifique des bulles de filtre au sein de Youtube. Spécifiquement, est-ce que YouTube nous enferme dans des bulles ? Nous verrons alors si à partir d'un utilisateur lambda, nous arrivons ou apercevoir un comportement de Youtube qui aura tendance à nous proposer du contenu similaire en fonction de ce que l'utilisateur à déjà regardé. Intuitevement cela paraît assez logique, néanmoins dans quelles limites youtube créé-t-il un profil de l'utilisateur et au bout de combien de temps on pourrait dire que youtube nous enferme dans une bulle.
+				Dans une ère où tout devient numérique les influences de chaque individu se décuplent avec un accès illimité à l'information. Cet accès aux connaissances dont on ne pourra jamais comprendre l'immensité est-il néanmoins décidé par chaque individu par son accès aux informations, ou alors il y a-t-il un biais externe qui serait responsable des ressources que les individus voient. Lorsque l'on fait une recherche sur un navigateur web, les résultats que l'on voit sont monitorés par l'algorithme de recherche, ils sont dans une certaine mesure régis par le propriétaire, en effet certaines pages web sont mis en avant en fonction de combien d'argent le site web a fourni pour être mis en avant. Alors, l'accès à cet information n'est pas un résultat objectif d'une verité pure d'un accès optimisé à l'information. Cet approche de l'information peut être mise en parallèle avec les bulles de filtres, selon Pariser, elle désigne à la fois le filtrage de l'information qui parvient à l'internaute par différents filtres ; et l'état d'« isolement intellectuel » et culturel dans lequel il se retrouve quand les informations qu'il recherche sur Internet résultent d'une personnalisation mise en place à son insu. Dans notre cas nous nous intéresseront au cas spécifique des bulles de filtre au sein de Youtube. Spécifiquement, est-ce que YouTube nous enferme dans des bulles ? Nous verrons alors si à partir d'un utilisateur lambda, nous arrivons ou apercevoir un comportement de Youtube qui aura tendance à nous proposer du contenu similaire en fonction de ce que l'utilisateur à déjà regardé. Intuitevement cela paraît assez logique, néanmoins dans quelles limites youtube créé-t-il un profil de l'utilisateur et au bout de combien de temps on pourrait dire que youtube nous enferme dans une bulle.
 			</div>
 		</div>
 		<div class="slide" data-anchor="Introduction-2">
@@ -68,6 +68,20 @@
 			<div class="content col-12">
 			<!-- Quelques chiffres -->
 				<h2>Réduction de données</h2>
+				Les données suivantes ont été collectées:
+				<ul>
+					<li>Titre</li>
+					<li>URL de la vidéo</li>
+					<li>URL (+nom) de la chaîne</li>
+					<li>Description</li>
+					<li>Tags</li>
+					<li>Commentaires (si pas désactivé) [100 premiers]</li>
+					<ul>
+						<li>Posteur (nom + url)</li>
+						<li>Contenu (texte)</li>
+						<li>Likes (nombre)</li>
+					</ul>
+				</ul>
 				<p>Comme nous avons récolté un grand nombre de données lors du scraping, pour obtenir des visualisations pertinentes, nous avons décidé de restreindre notre analyse à un sous-ensemble des données. Nous avons opté pour garder les données suivantes:</p>
 				<ul>
 					<li>Comme nous prenons les titres des recherches sur un site de news, il arrive que durant plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se limiter à un ensemble de 3 runs par sujet. Ceci a permis de diviser par 2.5 le nombre de runs.</li>
