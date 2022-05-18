@@ -166,7 +166,7 @@
 			<div class="content col-12">
 				Finalement, comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque run. Le topic choisi pour chaque run est simplement le sujet qui est le plus attribué aux vidéos dans cette run. En d'autres termes, le topic majoritaire dans les vidéos de cette run est attribuée à la run. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de runs par vidéo. 
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
-				L'idée derrière cette visualisation est que si un sujet contient une majorité de run, on pourrait potentiellellement dire que ce sujet est une bulle de filtre. 
+				Si certains sujets se démarque clairement des autres en termes du nombre d'attributions aux parcours, cela suggère que ce sujet  est relativement absorbant, i.e. un utilisateur a tendance à consommer beaucoup de contenus traitant de ce topic. Dans notre cas, nous pouvons observer que le sujet de la santé est particulièrement présent tandis que d'autres comme Ukraine-Russie le sont beaucoup moins.
 				<!-- inteprétation-->
 			</div>
 		</div>
@@ -174,7 +174,7 @@
 			<div class="content col-12">
 				Pour continuer avec l'idée précédente, nous allons maintenant voir si les topics les plus récurrents dans les runs, les xx, xx et xx, sont effectivement des bulles de filtres, c'est à dire des sujets dont on a du mal à se sortir. Pour se faire, nous proposons l'outil suivant. 
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
-				Chacun des ligne sur l'axe y correspond à une run. L'axe des x correspond à la posistion de la vidéo dans la run. Pour une run donnée, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette vidéo nous permet de voir comment les topics des vidéos au fur et à mesures d'une run. 
+				Chacune des lignes sur l'axe y correspond à un parcours, avec le thème de base ainsi que la catégorie du nombres de vues de la vidéo de départ. L'axe des x correspond à la posistion de la vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des vidéos au fur et à mesures d'une run. Nous pouvons observer que pour certains parcours, par exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives. Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.
 				<!-- TODO interprétation-->
 			</div>
 		</div>
