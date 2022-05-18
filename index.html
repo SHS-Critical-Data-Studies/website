@@ -63,8 +63,8 @@
 					<li>Nous laissons ensuite l'utilisateur naviguer en suivant les recommendations durant 4 heures. Il est important de prêter attention aux choix d'implémentation suivants:
 					<ul>
 						<li>L'utilisateur ne regarde aucun live YouTube.</li>
-						<Li>L'utilisateur regarde les vidéos pendant une durée maximale de xx minutes.</Li>
-						<li>L'utilisateur choisit une des vidéos proposées par l'algorithme en suivant une distribution de Poisson centrée entre la 2ème et la 3ème vidéo.</li>
+						<Li>L'utilisateur regarde les vidéos pendant une durée maximale de 15 minutes.</Li>
+						<li>L'utilisateur choisit une des vidéos proposées par l'algorithme en suivant une distribution de <a href="https://fr.wikipedia.org/wiki/Loi_de_Poisson">Poisson</a> centrée entre la 2ème et la 3ème vidéo.</li>
 					</ul>
 					</li>
 				</ul>
@@ -83,7 +83,7 @@
 					<li>URL (+nom) de la chaîne</li>
 					<li>Description</li>
 					<li>Tags</li>
-					<li>Commentaires (si pas désactivé) [100 premiers]</li>
+					<li>100 premiers commentaires (si pas désactivés)</li>
 					<ul>
 						<li>Posteur (nom + url)</li>
 						<li>Contenu (texte)</li>
@@ -101,7 +101,7 @@
 	<div class="section" data-anchor="Global">
 		<div class="slide" data-anchor="Global-1">
 			<div class="content col-12">
-				Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une étude réalisée précédemment (mettre source), il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expériences personnelles, nous avons produit la visualisation suivante afin de vérifier si cette suggestion était encore d'actualité. Cette visualisation représente le nombre de vues à travers différentes runs.
+				Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231703">étude</a> réalisée précédemment, il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expériences personnelles, nous avons produit la visualisation suivante afin de vérifier si cette suggestion était encore d'actualité. Cette visualisation représente le nombre de vues à travers différentes runs.
 				<br>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_views.html"></iframe>
 				A noter que l'axe des ordonnées est en échelle logarithmique, ce qui fait que les écarts sont plus grand que ce qu'il n'y paraît. Néanmoins, selon nos données, nous pouvons remarquer que Youtube n'a pas tendance à recommander des vidéos qui ont plus ou moins le même nombre de vues, contredisant la suggestion précédente. De plus, nous pouvons observer que le nombre de vues des vidéos à travers les runs semblent plutôt rester stable voir augmenter plutôt que descendre. On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un nombre de sujets restreints.
@@ -205,18 +205,14 @@
 			<div class="content col-12"></div>
 		</div>
 	</div>
-	<div class="section" data-anchor="NavCluster">
-		<div class="slide" data-anchor="NavCluster-1">
-			<div class="content col-12"></div>
+
+	<div class="section" data-anchor="Analysis">
+		<div class="slide" data-anchor="Analysis-1">
+			Terme bulle de filtre trop fort 
+
+			Mais "Bulles" clairement présentes,
+			à plusieurs niveaux
 		</div>
-		<div class="slide" data-anchor="NavCluster-2">
-		</div>
-		</div>
-		<div class="slide" data-anchor="NavCluster-3">
-			<div class="content col-12"></div>
-		</div>
-	</div>
-	<div class="section content col-12" data-anchor="About">
 	</div>
 </div>
 
