@@ -102,36 +102,35 @@
 	<div class="section" data-anchor="Global">
 		<div class="slide" data-anchor="Global-1">
 			<div class="content col-12">
-				Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231703">étude</a> réalisée précédemment, il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expériences personnelles, nous avons produit la visualisation suivante afin de vérifier si cette suggestion était encore d'actualité. Cette visualisation représente le nombre de vues à travers différentes runs.
-				<br>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_views.html"></iframe>
-				A noter que l'axe des ordonnées est en échelle logarithmique, ce qui fait que les écarts sont plus grand que ce qu'il n'y paraît. Néanmoins, selon nos données, nous pouvons remarquer que Youtube n'a pas tendance à recommander des vidéos qui ont plus ou moins le même nombre de vues, contredisant la suggestion précédente. De plus, nous pouvons observer que le nombre de vues des vidéos à travers les runs semblent plutôt rester stable voir augmenter plutôt que descendre. On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un nombre de sujets restreints.
+				<p>Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231703">étude</a> réalisée précédemment, il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expériences personnelles, nous avons produit la visualisation suivante afin de vérifier si cette suggestion était encore d'actualité. Cette visualisation représente le nombre de vues à travers différentes runs.</p>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_views.html"></iframe>
+				<p>A noter que l'axe des ordonnées est en échelle logarithmique, ce qui fait que les écarts sont plus grand que ce qu'il n'y paraît. Néanmoins, selon nos données, nous pouvons remarquer que Youtube n'a pas tendance à recommander des vidéos qui ont plus ou moins le même nombre de vues, contredisant la suggestion précédente. De plus, nous pouvons observer que le nombre de vues des vidéos à travers les runs semblent plutôt rester stable voir augmenter plutôt que descendre. On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un nombre de sujets restreints.<p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Global-2">
 			<div class="content col-12">
-				Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre analyse et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi des critères d'encloisonnement. Cette première visualisation nous permet de visualiser la durée des vidéos rencontrées durant les runs pour les différents sujets de notre étude. 
+				<p>Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre analyse et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi des critères d'encloisonnement. Cette première visualisation nous permet de visualiser la durée des vidéos rencontrées durant les runs pour les différents sujets de notre étude. </p>
 				<!-- TODO mettre les deux visualisations-->
 				<div class="col-12">
-					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_video_duration.html"></iframe>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_video_duration.html"></iframe>
 				</div>
-				On peut remarquer un phénomène similaire au précédent où la durée de la vidéo reste stable voir augmente. On peut remarquer que la durée des vidéos semble plus stable que le nombre de vues.
+				<p>On peut remarquer un phénomène similaire au précédent où la durée de la vidéo reste stable voir augmente. On peut remarquer que la durée des vidéos semble plus stable que le nombre de vues.</p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Global-3">
 			<div class="content col-12">
-				Ici, nous présentons le nombre d'abonnés de la chaîne YouTube à travers les runs.
+				<p>Ici, nous présentons le nombre d'abonnés de la chaîne YouTube à travers les runs.</p>
 				<div class="col-12">
-					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_sub.html"></iframe>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_sub.html"></iframe>
 				</div>
-				Il est intéressant de remarquer que certaines chaînes sont très absorbantes. De notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à s'échapper. Dans nos données, au moins 3 runs sont "enfermées" sur cette chaîne jusqu'à leur fin. A nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propres au créateur de contenu de ces chaînes là.  
+				<p>Il est intéressant de remarquer que certaines chaînes sont très absorbantes. De notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à s'échapper. Dans nos données, au moins 3 runs sont "enfermées" sur cette chaîne jusqu'à leur fin. A nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propres au créateur de contenu de ces chaînes là. </p>
 			</div>
 		</div>
 	</div>
 	<div class="section" data-anchor="Topic">
 		<div class="slide" data-anchor="Topic-1">
 			<div class="content col-12">
-				Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.
+				<p>Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.</p>
 				<div id="wordcloud_div">
 					<select id="wordcloud" class="form-select col-5" onchange="changeWordcloud()">
 						<option value="1">Topic 1 : International Affairs on Nuclear</option>
@@ -140,7 +139,7 @@
 						<option value="4">Topic 4 : News</option>
 						<option value="5">Topic 5 : Ukraine-Russia News</option>
 						<option value="6">Topic 6 : Ted Talks</option>
-						<option value="7">Topic 7 : Johnny Depp-Amber Heards</option>
+						<option value="7">Topic 7 : Johnny Depp-Amber Heard</option>
 						<option value="8">Topic 8 : Health</option>
 						<option value="9">Topic 9 : White House</option>
 						<option value="10">Topic 10 : Music</option>
@@ -153,29 +152,29 @@
 					<h3 id="wordcloud_title">Topic 1 : International Affairs on Nuclear</h3>
 					<img src="images/word_cloud_topic_0.png" id="wordcloud_img">
 				</div>
-				Comme cette technique est basée sur du Machine Learning, elle n'est pas dépourvue de failles et certains mots pour lesquels l'algorithme trouve des similarités n'ont peut-être aucun, voir très peu de sens pour les humains. Nous pouvons voir des exemples de topics pour lesquelles cela fonctionne très bien, comme les topics 5, 9 ou 12. On peut également trouver des exemples pour lesquels l'algorithme ne fonctionne pas, par exemple le topic 15. Néanmoins, nous sommes plutôt content du résultat. 
+				<p>Comme cette technique est basée sur du Machine Learning, elle n'est pas dépourvue de failles et certains mots pour lesquels l'algorithme trouve des similarités n'ont très peu, voir aucun, sens logique pour les humains. Nous pouvons voir des topics pour lesquels la classification des mots fonctionne très bien, comme par exemple le topic 7 qui a bien regroupé les mots Pirates des Caraïbes, Johnny Depp et Amber Heard à cause du procès actuellement en cours. Un autre example intéressant est le topic 5 qui contient tous les mots liés à la guerre Ukraine vs Russie qui fait rage.  On peut également trouver des exemples pour lesquels l'algorithme fonctionne moins bien, comme par exemple le topic 4 qui contient des mots avec des liens non-triviaux à trouver.</p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-2">
 			<div class="content col-12">
-				Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans le temps. LDA attribue une distribution de probabilités sur les topics pour chaque vidéo. Par la suite, nous avons attribué le topic avec la plus grande vidéo pour chaque vidéo comme étant son topic principal. Nous vous présentons à présent l'histogramme du nombre de vidéos par topic à chaque instant à travers les runs. C'est à dire que nous montrons l'histogramme du nombre de vidéos par topic en ne considérant que les premières vidéos de chaque run, puis les secondes, puis les troisièmes, etc....<br>
+				<p>Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans le temps. LDA attribue une distribution de probabilités sur les topics pour chaque vidéo. Par la suite, nous avons attribué le topic avec la plus grande vidéo pour chaque vidéo comme étant son topic principal. Nous vous présentons à présent l'histogramme du nombre de vidéos par topic à chaque instant à travers les runs. C'est à dire que nous montrons l'histogramme du nombre de vidéos par topic en ne considérant que les premières vidéos de chaque run, puis les secondes, puis les troisièmes, etc....</p>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_topic_in_video.html"></iframe>
-				Afin de démontrer l'existence de grosses bulles de filtres, nous aurions espérer qu'un ou plusieurs topics allaient accumuler un grand nombre de vidéos au fur et à mesure que le temps avance. Malheureusement, on peut voir que dans nos données on n'observe malheureusment pas ce genre de comportements. Nous allons donc explorer plus en détails ce qui se passe dans chaque run dans la prochaine section du site afin de montrer si certains des topics sont réellement des bulles de filtres ou non.
+				<p>Afin de démontrer l'existence de grosses bulles de filtres, nous aurions espérer qu'un ou plusieurs topics allaient accumuler un grand nombre de vidéos au fur et à mesure que le temps avance. Malheureusement, on peut voir que dans nos données on n'observe pas ce genre de comportements. Nous allons donc explorer plus en détails ce qui se passe dans chaque run dans la prochaine section du site afin de montrer si certains des topics sont réellement des bulles de filtres ou non.</p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-3">
 			<div class="content col-12">
-				Finalement, comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque run. Le topic choisi pour chaque run est simplement le sujet qui est le plus attribué aux vidéos dans cette run. En d'autres termes, le topic majoritaire dans les vidéos de cette run est attribuée à la run. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de runs par vidéo. 
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
-				Si certains sujets se démarque clairement des autres en termes du nombre d'attributions aux parcours, cela suggère que ce sujet  est relativement absorbant, i.e. un utilisateur a tendance à consommer beaucoup de contenus traitant de ce topic. Dans notre cas, nous pouvons observer que le sujet de la santé est particulièrement présent tandis que d'autres comme Ukraine-Russie le sont beaucoup moins.
+				<p>Finalement, comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque run. Le topic choisi pour chaque run est simplement le sujet qui est le plus attribué aux vidéos dans cette run. En d'autres termes, le topic majoritaire dans les vidéos de cette run est attribuée à la run. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de runs par vidéo. </p>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
+				<p>Si certains sujets se démarque clairement des autres en termes du nombre d'attributions aux parcours, cela suggère que ce sujet  est relativement absorbant, i.e. un utilisateur a tendance à consommer beaucoup de contenus traitant de ce topic. Dans notre cas, nous pouvons observer que le sujet de la santé est particulièrement présent tandis que d'autres comme Ukraine-Russie le sont beaucoup moins.</p>
 				<!-- inteprétation-->
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-4">
 			<div class="content col-12">
-				Pour continuer avec l'idée précédente, nous allons maintenant voir si les topics les plus récurrents dans les runs, les xx, xx et xx, sont effectivement des bulles de filtres, c'est à dire des sujets dont on a du mal à se sortir. Pour se faire, nous proposons l'outil suivant. 
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
-				Chacune des lignes sur l'axe y correspond à un parcours, avec le thème de base ainsi que la catégorie du nombres de vues de la vidéo de départ. L'axe des x correspond à la posistion de la vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des vidéos au fur et à mesures d'une run. Nous pouvons observer que pour certains parcours, par exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives. Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.
+				<p>Pour continuer avec l'idée précédente, nous allons maintenant voir si les topics les plus récurrents dans les runs, les xx, xx et xx, sont effectivement des bulles de filtres, c'est à dire des sujets dont on a du mal à se sortir. Pour se faire, nous proposons l'outil suivant. </p>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
+				<p>(<span style="font-style:italic;"> Il est possible de scroller dans la visualisation</span>) Chacune des lignes sur l'axe y correspond à un parcours, avec le thème de base ainsi que la catégorie du nombres de vues de la vidéo de départ. L'axe des x correspond à la posistion de la vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des vidéos au fur et à mesures d'une run. Nous pouvons observer que pour certains parcours, par exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives. Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.</p>
 				<!-- TODO interprétation-->
 			</div>
 		</div>
@@ -184,7 +183,7 @@
 	<div class="section" data-anchor="NavRun">
 		<div class="slide" data-anchor="NavRun-1">
 			<div class="content col-12">
-				Nous concluons cette exploration interactive avec une visualisation un peu plus complexe à comprendre. Pour des questions de visualisations, nous avons projeté les vecteurs de probabilités des vidéos dans un espace en 2 dimensions avec <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a>. Grâce à cela, nous sommes en mesures de visualiser comment un run se déplace dans l'espace des vidéos. Intuitivement, si celui-ci ne bouge pas beaucoup, cela veut dire que la run reste bloquée dans un certain topic et que nous pouvons considéré ce topic comme une bulle de filtre comme il est très dur d'en sortir. Dans la visualisation ci-dessous, nous montrons simultanémenet les 3 départs différents pour un sujet recherché. Grâce à cela, il nous sera possible de voir si les vidéos plus ou moins vues ont tendance à rester bloquer dans des bulles de filtres ou non. 
+				<p>Nous concluons cette exploration interactive avec une visualisation un peu plus complexe à comprendre. Pour des questions de visualisations, nous avons projeté les vecteurs de probabilités des vidéos dans un espace en 2 dimensions avec <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a>. Grâce à cela, nous sommes en mesures de visualiser comment un run se déplace dans l'espace des vidéos. Intuitivement, si celui-ci ne bouge pas beaucoup, cela veut dire que la run reste bloquée dans un certain topic et que nous pouvons considéré ce topic comme une bulle de filtre comme il est très dur d'en sortir. Dans la visualisation ci-dessous, nous montrons simultanémenet les 3 départs différents pour un sujet recherché. Grâce à cela, il nous sera possible de voir si les vidéos plus ou moins vues ont tendance à rester bloquer dans des bulles de filtres ou non. </p>
 				<select id="displayrun" class="form-select" onchange="changeDisplayRun()">
 					<option value="3_Americans_Bahamas">3 Americans Bahamas</option>
 					<option value="Biden_First_Jill_Ukraine">Biden First Jill Ukraine</option>
@@ -196,9 +195,9 @@
 					<option value="Mariupol_Zaporizhzhia">Mariupol Zaporizhzhia</option>
 					<option value="Russia">Russia</option>
 				</select>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3_Americans_Bahamas.html" id="explore"></iframe>
+				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3_Americans_Bahamas.html" id="explore"></iframe>
 				<!-- TODO visausliation-->
-				Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. 
+				<p>Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. </p>
 				<!-- TODO interprétation-->
 			</div>
 		</div>
