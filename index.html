@@ -130,7 +130,7 @@
 	<div class="section" data-anchor="Topic">
 		<div class="slide" data-anchor="Topic-1">
 			<div class="content col-12">
-				<p>Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.</p>
+				<p>Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> (LDA) afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.</p>
 				<div id="wordcloud_div">
 					<select id="wordcloud" class="form-select col-5" onchange="changeWordcloud()">
 						<option value="1">Topic 1 : International Affairs on Nuclear</option>
@@ -207,22 +207,50 @@
 				</div>
 			</div>
 		</div>
-		<div class="slide" data-anchor="Navtrajet-2">
-			<div class="content col-12"></div>
-		</div>
 	</div>
 
 	<div class="section" data-anchor="Conclusion">
 		<div class="slide" data-anchor="Conclusion-1">
-			Pour conclure, nous avons pu remarqué au travers de cette analyse que le terme bulle de filtre au sens de Pariset est peut être un peu fort. Dans notre expérience, nous avons remarqué que des bulles étaient clairement et que nous pouvons tourné un certain temps dans le même sujet. Par contre, nous avons clairement pu remarqué la présence de bulle autour de certains sujets. Mais nous arrivons quasiment toujours à nous échapper ces sujets.<br><br>
-			NOE CONCLUE PLUS 
+			Pour conclure, nous avons pu remarqué au travers de cette analyse que le terme <a href="https://fr.wikipedia.org/wiki/Bulle_de_filtres">bulle de filtres</a> comme défini par Pariser est peut être un peu fort pour ce que nous observons. 
+			<p>En particulier, Pariser a mentionné trois dynamiques présentes dans les bulles de filtres, que nous allons maintenant analyser.</p>
+			
+			<!-- Dans notre expérience, nous avons remarqué que des bulles étaient clairement et que nous pouvons tourné un certain temps dans le même sujet. 
+			Par contre, nous avons clairement pu remarqué la présence de bulle autour de certains sujets. 
+			Mais nous arrivons quasiment toujours à nous échapper ces sujets.<br><br>
 			Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la récolte, cleaning et traitement de données. Cela nous aura aussi de rajouter de l'expérience en terme de visualisations. De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de YouTube de façon automatisée. Pour se faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations des données sur deux GitHub différents: <a href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>
+			-->
 
-			Terme bulle de filtre trop fort 
+		</div>
+		<div class="slide" data-anchor="Conclusion-2">
+			<h1>Isolation</h1>
+			De par sa personnalisation, une bulle est unique à chacun.
 
-			Mais "Bulles" clairement présentes,
-			à plusieurs niveaux
+			<p>Dans nos expériences, les bulles que nous observons sont certes variées, mais certains des sujets à leur coeur se retrouve dans plusieurs d'entre elles.</p>
+		</div>
+		<div class="slide" data-anchor="Conclusion-3">
+			<h1>Invisibilité</h1>
+			La bulle se conforme à l'image qu'elle a de vous, mais ne vous dit pas quelle est cette image.
 
+			<p>Les comportements que nous pourrions désigner comme "bulles" restent généralement assez visibles. En revanche, on retrouve l'idée que l'on se retrouve tout de même enfermé dans une image que YouTube a de l'utilisateur, image qu'il n'a pas choisi.</p>
+		</div>
+		<div class="slide" data-anchor="Conclusion-4">
+			<h1>Non-choix</h1>
+			On ne décide pas d'entrer dans la bulle, elle vient à nous.
+
+			<p>Notre crawler se contente de naviguer les vidéos proposées; il ne possède aucune logique qui essaierait volontairement de se retrouver enfermé.</p>
+		</div>
+		<div class="slide" data-anchor="Conclusion-5">
+			En conclusion, nous observons un phénomène que nous pouvons intuitivement appeler un bulle: 
+			une fois dedans, tout ce qui est recommandé se ressemble.
+
+			<p>Toutes les dynamiques des bulles de filtres apparraissent aussi, mais dans une forme diluée, moins tranchée</p>
+
+			<br>
+			<br>
+			Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la récolte, cleaning et traitement de données. 
+			Cela nous aura aussi de rajouter de l'expérience en terme de visualisations. 
+			De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de YouTube de façon automatisée. 
+			Pour ce faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations des données sur des dépôts GitHub: <a href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>.
 		</div>
 	</div>
 </div>
