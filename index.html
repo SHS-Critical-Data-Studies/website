@@ -110,7 +110,6 @@
 		<div class="slide" data-anchor="Global-2">
 			<div class="content col-12">
 				<p>Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre analyse et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi des critères d'encloisonnement. Cette première visualisation nous permet de visualiser la durée des vidéos rencontrées durant les trajets pour les différents sujets de notre étude. </p>
-				<!-- TODO mettre les deux visualisations-->
 				<div class="col-12">
 					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_video_duration.html"></iframe>
 				</div>
@@ -167,15 +166,15 @@
 				<p>Finalement, comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque trajet. Le topic choisi pour chaque trajet est simplement le sujet qui est le plus attribué aux vidéos dans cette trajet. En d'autres termes, le topic majoritaire dans les vidéos de cette trajet est attribuée à la trajet. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de trajets par vidéo. </p>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
 				<p>Si certains sujets se démarque clairement des autres en termes du nombre d'attributions aux parcours, cela suggère que ce sujet  est relativement absorbant, i.e. un utilisateur a tendance à consommer beaucoup de contenus traitant de ce topic. Dans notre cas, nous pouvons observer que le sujet de la santé est particulièrement présent tandis que d'autres comme Ukraine-Russie le sont beaucoup moins.</p>
-				<!-- inteprétation-->
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-4">
 			<div class="content col-12">
-				<p>Pour continuer avec l'idée précédente, nous allons maintenant voir si les topics les plus récurrents dans les trajets, les xx, xx et xx, sont effectivement des bulles de filtres, c'est à dire des sujets dont on a du mal à se sortir. Pour se faire, nous proposons l'outil suivant. </p>
+				<p>
+					Afin de visuellement vérifier si des sujets sont des bulles ou non, c'est-à-dire des sujets dont on a du mal à a se sort, on vous propose à présent l'outil suivant:
+				</p>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
 				<p>(<span style="font-style:italic;"> Il est possible de scroller dans la visualisation</span>) Chacune des lignes sur l'axe y correspond à un parcours, avec le thème de base ainsi que la catégorie du nombres de vues de la vidéo de départ. L'axe des x correspond à la posistion de la vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des vidéos au fur et à mesures d'une trajet. Nous pouvons observer que pour certains parcours, par exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives. Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.</p>
-				<!-- TODO interprétation-->
 			</div>
 		</div>
 	</div>
@@ -198,12 +197,10 @@
 					</select>
 
 					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3_Americans_Bahamas.html" id="explore"></iframe>
-					<!-- TODO visausliation-->
 				</div>
 				<div class="col-12 col-lg-5" style="display:inline-block;">
 				<p>Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. Grâce à cet outil, nous sommes en mesure de visualiser si un des trajet que l'on considère reste bloquer dans un topic (un nuage de points très compact). En naviguant à travers les trajets, on peut vori que la plupart des simulations visitent un certains nombre (par exemple 4 ou 5) de topics et ensuite oscillent entre à l'intéreur de ce nombre restreints de topics. Il est vraiment difficile de voir un comportement dans lequel un trajet est complètement bloqué dans un et un seul sujet. <br>
 				Dans le thème "3 Americans Bahamas", on peut observer que le trajet qui part avec des vidéos avec plus de 50'000 vues (orange) reste bloqué un long moment dans un seul topic, mais c'est un des seuls parcours pour lequel nous pouvons observer ce phéonomène. Néanmoins, il semblerait qu'il s'agisse des trajets commençant par une vidéo avec moins de 5'000 vues (bleu) qui oscillent entre 3-4 topics durant la durée entière du parcours. </p>
-				<!-- TODO interprétation-->
 				</div>
 			</div>
 		</div>
