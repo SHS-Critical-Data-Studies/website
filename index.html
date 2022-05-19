@@ -40,7 +40,7 @@
 				<img src="images/scheme1.jpg" style="width:40%"  class="img-tool">
 			</div>
 				<h2>Outils et buts</h2>
-				<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une boucle. Pour se faire, nous avons développé un protocole d'expérience (décrit par la suite) dans lequel nous nous laissons guider par l'algorithme de recommendations de YouTube et obeservons où cela nous mène. </p>
+				<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une boucle. Pour ce faire, nous avons développé un protocole d'expérience (décrit par la suite) dans lequel nous nous laissons guider par l'algorithme de recommendations de YouTube et obeservons où cela nous mène. </p>
 				<p>Sur ce site, nous proposons divers outils afin de pouvoir naviguer aisément parmi les données récoltées. Tous les outils que nous vous proposons d'explorer sont intuitifs et intéractifs.</p>
 				<p>Dans nos expériences, nous avons utilisé le mot <b>topic</b> pour désigner les sujets auxquels on s'intéresse. De la même manière, nous avons utilisé le mot <b>trajet</b> pour désigner un trajet complet en se laissant guider par l'algorithme de recommendations YouTube.</p>
 			</div>
@@ -55,17 +55,17 @@
 				Notre protocole d'expérience le plus récent fonctionne de la manière suivante:
 				<ul>
 					<li>Chaque jour, nous sélectionnons 5 sujets d'actualité différents sur le site <a href="https://news.google.com">Google News</a></li>
-					<li>Pour chacun des sujets, nous faisons une recherche avec un utilisateur vierge et nous sélectionnons 3 vidéos de départ différentes (en termes de nombre de vues)
+					<li>Pour chacun des sujets, nous faisons une recherche avec un utilisateur vierge et nous sélectionnons 3 vidéos de départ différentes
 					<ul>
 						<li>1 vidéo avec moins de 5'000 vues</li>
 						<li>1 vidéo entre 5'000 et 50'000 vues</li>
 						<li>1 vidéo avec plus de 50'000 vues</li>
 					</ul>
-					<li>Nous laissons ensuite l'utilisateur naviguer en suivant les recommendations durant 4 heures. Il est important de prêter attention aux choix d'implémentation suivants:
+					<li>Nous laissons ensuite nos trois utilisateurs (un par point de départ) naviguer en suivant les recommendations durant 4 heures. Il est important de prêter attention aux choix d'implémentation suivants:
 					<ul>
 						<li>L'utilisateur ne regarde aucun live YouTube.</li>
 						<Li>L'utilisateur regarde les vidéos pendant une durée maximale de 15 minutes.</Li>
-						<li>L'utilisateur choisit une des vidéos proposées par l'algorithme en suivant une distribution de <a href="https://fr.wikipedia.org/wiki/Loi_de_Poisson">Poisson</a> centrée entre la 2ème et la 3ème vidéo.</li>
+						<li>Lorsqu'il est temps de passer à la vidéo suivante, l'utilisateur choisit une des vidéos proposées par l'algorithme en suivant une distribution de <a href="https://fr.wikipedia.org/wiki/Loi_de_Poisson">Poisson</a> centrée entre la 2ème et la 3ème vidéo.</li>
 					</ul>
 					</li>
 				</ul>
@@ -91,7 +91,8 @@
 						<li>Likes (nombre)</li>
 					</ul>
 				</ul>
-				<p>Comme nous avons récolté un grand nombre de données lors du scraping, pour obtenir des visualisations pertinentes, nous avons décidé de restreindre notre analyse à un sous-ensemble des données. Nous avons opté pour garder les données suivantes:</p>
+				<p>Comme nous avons récolté un grand nombre de données, pour obtenir des visualisations pertinentes, nous avons décidé de restreindre notre analyse à un sous-ensemble des données. 
+					Nous avons fait les choix suivants:</p>
 				<ul>
 					<li>Comme nous prenons les titres des recherches sur un site de news, il arrive que durant plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se limiter à un ensemble de 3 trajets par sujet. Ceci a permis de diviser par 2.5 le nombre de trajets.</li>
 					<li>Suite à cela, nous avons enlevé les vidéos pour lesquelles les tags n'étaient pas définis (en effet nous avons besoin de ces derniers pour faire notre analyse) et avons uniquemment gardé les trajets qui ont au moins 10 vidéos.</li>
@@ -122,7 +123,7 @@
 				<div class="col-12">
 					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_sub.html"></iframe>
 				</div>
-				<p>Il est intéressant de remarquer que certaines chaînes sont très absorbantes. De notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à s'échapper. Dans nos données, au moins 3 trajets sont "enfermées" sur cette chaîne jusqu'à leur fin. A nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propres au créateur de contenu de ces chaînes là. </p>
+				<p>Il est intéressant de remarquer que certaines chaînes sont très absorbantes. De notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à s'échapper. Dans nos données, au moins 3 trajets se sont "enfermées" dans cette chaîne jusqu'à leur fin. À nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propres au créateur de contenu de ces chaînes là. </p>
 			</div>
 		</div>
 	</div>
@@ -151,19 +152,19 @@
 					<h3 id="wordcloud_title">Topic 1 : International Affairs on Nuclear</h3>
 					<img src="images/word_cloud_topic_0.png" id="wordcloud_img">
 				</div>
-				<p>Comme cette technique est basée sur du Machine Learning, elle n'est pas dépourvue de failles et certains mots pour lesquels l'algorithme trouve des similarités n'ont très peu, voir aucun, sens logique pour les humains. Nous pouvons voir des topics pour lesquels la classification des mots fonctionne très bien, comme par exemple le topic 7 qui a bien regroupé les mots Pirates des Caraïbes, Johnny Depp et Amber Heard à cause du procès actuellement en cours. Un autre example intéressant est le topic 5 qui contient tous les mots liés à la guerre Ukraine vs Russie qui fait rage.  On peut également trouver des exemples pour lesquels l'algorithme fonctionne moins bien, comme par exemple le topic 4 qui contient des mots avec des liens non-triviaux à trouver.</p>
+				<p>Comme cette technique est basée sur du Machine Learning, elle n'est pas dépourvue de failles et certains mots pour lesquels l'algorithme trouve des similarités n'ont très peu, voir aucun, sens logique pour les humains. Nous pouvons voir des topics pour lesquels la classification des mots fonctionne très bien, comme par exemple le topic 7 qui a bien regroupé les mots Pirates des Caraïbes, Johnny Depp et Amber Heard à cause du <a href="https://fr.wikipedia.org/wiki/Bataille_judiciaire_entre_Johnny_Depp_et_Amber_Heard">procès</a> actuellement en cours. Un autre example intéressant est le topic 5 qui contient tous les mots liés au <a href="https://fr.wikipedia.org/wiki/Conflit_russo-ukrainien">conflit russo-ukrainien</a> qui fait rage.  On peut également trouver des exemples pour lesquels l'algorithme fonctionne moins bien, comme par exemple le topic 4 qui contient des mots avec des liens non-triviaux à trouver.</p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-2">
 			<div class="content col-12">
-				<p>Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans le temps. LDA attribue une distribution de probabilités sur les topics pour chaque vidéo. Par la suite, nous avons attribué le topic avec la plus grande vidéo pour chaque vidéo comme étant son topic principal. Nous vous présentons à présent l'histogramme du nombre de vidéos par topic à chaque instant à travers les trajets. C'est à dire que nous montrons l'histogramme du nombre de vidéos par topic en ne considérant que les premières vidéos de chaque trajet, puis les secondes, puis les troisièmes, etc....</p>
+				<p>Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans le temps. LDA attribue une distribution de probabilités sur les topics pour chaque vidéo. Par la suite, nous avons attribué le topic avec la plus grande probabilité comme étant le topic principal de la vidéo. Nous vous présentons à présent l'histogramme du nombre de vidéos par topic à chaque instant à travers les trajets. C'est à dire que nous montrons l'histogramme du nombre de vidéos par topic en ne considérant que les premières vidéos de chaque trajet, puis les secondes, puis les troisièmes, etc....</p>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_topic_in_video.html"></iframe>
 				<p>Afin de démontrer l'existence de grosses bulles de filtres, nous aurions espérer qu'un ou plusieurs topics allaient accumuler un grand nombre de vidéos au fur et à mesure que le temps avance. Malheureusement, on peut voir que dans nos données on n'observe pas ce genre de comportements. Nous allons donc explorer plus en détails ce qui se passe dans chaque trajet dans la prochaine section du site afin de montrer si certains des topics sont réellement des bulles de filtres ou non.</p>
 			</div>
 		</div>
 		<div class="slide" data-anchor="Topic-3">
 			<div class="content col-12">
-				<p>Finalement, comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque trajet. Le topic choisi pour chaque trajet est simplement le sujet qui est le plus attribué aux vidéos dans cette trajet. En d'autres termes, le topic majoritaire dans les vidéos de cette trajet est attribuée à la trajet. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de trajets par vidéo. </p>
+				<p>Comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque trajet. Le topic choisi pour chaque trajet est simplement le sujet qui est le plus attribué aux vidéos dans ce trajet. En d'autres termes, le topic majoritaire dans les vidéos de ce trajet est attribuée à la trajet. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de trajets par topic. </p>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
 				<p>Si certains sujets se démarque clairement des autres en termes du nombre d'attributions aux parcours, cela suggère que ce sujet  est relativement absorbant, i.e. un utilisateur a tendance à consommer beaucoup de contenus traitant de ce topic. Dans notre cas, nous pouvons observer que le sujet de la santé est particulièrement présent tandis que d'autres comme Ukraine-Russie le sont beaucoup moins.</p>
 			</div>
@@ -171,10 +172,10 @@
 		<div class="slide" data-anchor="Topic-4">
 			<div class="content col-12">
 				<p>
-					Afin de visuellement vérifier si des sujets sont des bulles ou non, c'est-à-dire des sujets dont on a du mal à a se sort, on vous propose à présent l'outil suivant:
+					Afin de visuellement vérifier si des sujets sont des bulles ou non, c'est-à-dire des sujets dont on a du mal à a se sort, nous vous proposons à présent l'outil suivant:
 				</p>
 				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
-				<p>(<span style="font-style:italic;"> Il est possible de scroller dans la visualisation</span>) Chacune des lignes sur l'axe y correspond à un parcours, avec le thème de base ainsi que la catégorie du nombres de vues de la vidéo de départ. L'axe des x correspond à la posistion de la vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des vidéos au fur et à mesures d'une trajet. Nous pouvons observer que pour certains parcours, par exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives. Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.</p>
+				<p>(<span style="font-style:italic;"> Il est possible de scroller dans la visualisation</span>) Chacune des lignes sur l'ordonnée correspond à un parcours, avec le thème de base ainsi que la catégorie du nombres de vues de la vidéo de départ. L'abscisse correspond à la posistion de la vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des vidéos au fur et à mesures d'une trajet. Nous pouvons observer que pour certains parcours, par exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives. Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.</p>
 			</div>
 		</div>
 	</div>
@@ -199,7 +200,7 @@
 					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3_Americans_Bahamas.html" id="explore"></iframe>
 				</div>
 				<div class="col-12 col-lg-5" style="display:inline-block;">
-				<p>Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. Grâce à cet outil, nous sommes en mesure de visualiser si un des trajet que l'on considère reste bloquer dans un topic (un nuage de points très compact). En naviguant à travers les trajets, on peut vori que la plupart des simulations visitent un certains nombre (par exemple 4 ou 5) de topics et ensuite oscillent entre à l'intéreur de ce nombre restreints de topics. Il est vraiment difficile de voir un comportement dans lequel un trajet est complètement bloqué dans un et un seul sujet. <br>
+				<p>Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. Grâce à cet outil, nous sommes en mesure de visualiser si un des trajet que l'on considère reste bloquer dans un topic (un nuage de points très compact). En naviguant à travers les trajets, on peut voir que la plupart des simulations visitent un certains nombre (par exemple 4 ou 5) de topics et ensuite oscillent l'intéreur de ce nombre restreints de topics. Il est vraiment difficile de voir un comportement dans lequel un trajet est complètement bloqué dans un et un seul sujet. <br>
 				Dans le thème "3 Americans Bahamas", on peut observer que le trajet qui part avec des vidéos avec plus de 50'000 vues (orange) reste bloqué un long moment dans un seul topic, mais c'est un des seuls parcours pour lequel nous pouvons observer ce phéonomène. Néanmoins, il semblerait qu'il s'agisse des trajets commençant par une vidéo avec moins de 5'000 vues (bleu) qui oscillent entre 3-4 topics durant la durée entière du parcours. </p>
 				</div>
 			</div>
@@ -214,7 +215,7 @@
 			<!-- Dans notre expérience, nous avons remarqué que des bulles étaient clairement et que nous pouvons tourné un certain temps dans le même sujet. 
 			Par contre, nous avons clairement pu remarqué la présence de bulle autour de certains sujets. 
 			Mais nous arrivons quasiment toujours à nous échapper ces sujets.<br><br>
-			Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la récolte, cleaning et traitement de données. Cela nous aura aussi de rajouter de l'expérience en terme de visualisations. De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de YouTube de façon automatisée. Pour se faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations des données sur deux GitHub différents: <a href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>
+			Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la récolte, cleaning et traitement de données. Cela nous aura aussi de rajouter de l'expérience en terme de visualisations. De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de YouTube de façon automatisée. Pour ce faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations des données sur deux GitHub différents: <a href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>
 			-->
 
 		</div>
