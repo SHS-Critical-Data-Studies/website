@@ -1,284 +1,449 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Critical Data Studies - Les recommendations YouTube</title>
 	<meta name="author" content="Alessio Verardo, Cyrille Pittet, Hugo Lanfranchi, Noé de Santo, Robin Plumey">
 	<meta name="description" content="Visualisation des recommendations youtube">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="keywords" content="recommendations youtube, Visualisation, Vizualisation, SHS, critical data studies, Data Visualisation">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="js/scrolloverflow.min.js"></script>
-<script src="js/fullpage2.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>-->
-<link rel="stylesheet" href="css/fullpage.min.css">
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/main.css">
-<link rel="stylesheet" href="css/fontawesome.min.css">
-<link rel="icon" href="images/youtube-logo.png">
+	<meta name="keywords"
+		content="recommendations youtube, Visualisation, Vizualisation, SHS, critical data studies, Data Visualisation">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script src="js/scrolloverflow.min.js"></script>
+	<script src="js/fullpage2.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.9.7/jquery.fullpage.min.js"></script>-->
+	<link rel="stylesheet" href="css/fullpage.min.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/fontawesome.min.css">
+	<link rel="icon" href="images/youtube-logo.png">
 </head>
+
 <body>
-<div id="wrapper">
-	<div class="section col-12" data-anchor="Title">
-		<img src="images/youtube-logo.png">
-		<h1>Où nous emmènent les recommendations YouTube ? </h1>
-		<h3>Alessio Verardo, Cyrille Pittet, Hugo Lanfranchi, Noé de Santo, Robin Plumey</h3>
-	</div>
-	<div class="section" data-anchor="Introduction">
-		<div class="slide" data-anchor="Introduction-1">
-			<div class="content col-12">
-				<h1>Introduction</h1>
-				<!-- explication de la problématique-->
-				
-			</div>
+	<div id="wrapper">
+		<div class="section col-12" data-anchor="Title">
+			<img src="images/youtube-logo.png">
+			<h1>Où nous emmènent les recommendations YouTube ? </h1>
+			<h3>Alessio Verardo, Cyrille Pittet, Hugo Lanfranchi, Noé de Santo, Robin Plumey</h3>
 		</div>
-		<div class="slide" data-anchor="Introduction-2">
-			<div class="content col-12">
-			<!-- Buts des outils-->
-			<div style="text-align:center">
-				<img src="images/scheme1.jpg" style="width:40%"  class="img-tool">
-			</div>
-				<h2>Outils et buts</h2>
-				<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une boucle. Pour se faire, nous avons développé un protocole d'expérience (décrit par la suite) dans lequel nous nous laissons guider par l'algorithme de recommendations de YouTube et obeservons où cela nous mène. </p>
-				<p>Sur ce site, nous proposons divers outils afin de pouvoir naviguer aisément parmi les données récoltées. Tous les outils que nous vous proposons d'explorer sont intuitifs et intéractifs.</p>
-				<p>Dans nos expériences, nous avons utilisé le mot <b>topic</b> pour désigner les sujets auxquels on s'intéresse. De la même manière, nous avons utilisé le mot <b>trajet</b> pour désigner un trajet complet en se laissant guider par l'algorithme de recommendations YouTube.</p>
-			</div>
-		</div>
-		<div class="slide" data-anchor="Introduction-3">
-			<div class="content col-12">
-			<!-- Explication du protocole -->
-			<div style="text-align:center">
-			<img src="images/scheme2.jpg" style="width:40%" class="img-tool">
-		</div>
-				<h2>Protocole d'expérience</h2>
-				Notre protocole d'expérience le plus récent fonctionne de la manière suivante:
-				<ul>
-					<li>Chaque jour, nous sélectionnons 5 sujets d'actualité différents sur le site <a href="https://news.google.com">Google News</a></li>
-					<li>Pour chacun des sujets, nous faisons une recherche avec un utilisateur vierge et nous sélectionnons 3 vidéos de départ différentes (en termes de nombre de vues)
-					<ul>
-						<li>1 vidéo avec moins de 5'000 vues</li>
-						<li>1 vidéo entre 5'000 et 50'000 vues</li>
-						<li>1 vidéo avec plus de 50'000 vues</li>
-					</ul>
-					<li>Nous laissons ensuite l'utilisateur naviguer en suivant les recommendations durant 4 heures. Il est important de prêter attention aux choix d'implémentation suivants:
-					<ul>
-						<li>L'utilisateur ne regarde aucun live YouTube.</li>
-						<Li>L'utilisateur regarde les vidéos pendant une durée maximale de 15 minutes.</Li>
-						<li>L'utilisateur choisit une des vidéos proposées par l'algorithme en suivant une distribution de <a href="https://fr.wikipedia.org/wiki/Loi_de_Poisson">Poisson</a> centrée entre la 2ème et la 3ème vidéo.</li>
-					</ul>
-					</li>
-				</ul>
-			</div>
-		</div>
-		<div class="slide" data-anchor="Introduction-4">
-			<div class="content col-12">
-			<div style="text-align:center">
-				<img src="images/scheme3.jpg" style="width:30%" class="img-tool">
-			</div>
-				<h2>Réduction de données</h2>
-				Les données suivantes ont été collectées:
-				<ul>
-					<li>Titre</li>
-					<li>URL de la vidéo</li>
-					<li>URL (+nom) de la chaîne</li>
-					<li>Description</li>
-					<li>Tags</li>
-					<li>100 premiers commentaires (si pas désactivés)</li>
-					<ul>
-						<li>Posteur (nom + url)</li>
-						<li>Contenu (texte)</li>
-						<li>Likes (nombre)</li>
-					</ul>
-				</ul>
-				<p>Comme nous avons récolté un grand nombre de données lors du scraping, pour obtenir des visualisations pertinentes, nous avons décidé de restreindre notre analyse à un sous-ensemble des données. Nous avons opté pour garder les données suivantes:</p>
-				<ul>
-					<li>Comme nous prenons les titres des recherches sur un site de news, il arrive que durant plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se limiter à un ensemble de 3 trajets par sujet. Ceci a permis de diviser par 2.5 le nombre de trajets.</li>
-					<li>Suite à cela, nous avons enlevé les vidéos pour lesquelles les tags n'étaient pas définis (en effet nous avons besoin de ces derniers pour faire notre analyse) et avons uniquemment gardé les trajets qui ont au moins 10 vidéos.</li>
-				</ul>
-			</div>
-		</div>
-	</div>
-	<div class="section" data-anchor="Global">
-		<div class="slide" data-anchor="Global-1">
-			<div class="content col-12">
-				<p>Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231703">étude</a> réalisée précédemment, il a été suggéré que l'algorithme de recommendations YouTube a tendance à nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà remarqué cela au cours d'expériences personnelles, nous avons produit la visualisation suivante afin de vérifier si cette suggestion était encore d'actualité. Cette visualisation représente le nombre de vues à travers différentes trajets.</p>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_views.html"></iframe>
-				<p>A noter que l'axe des ordonnées est en échelle logarithmique, ce qui fait que les écarts sont plus grand que ce qu'il n'y paraît. Néanmoins, selon nos données, nous pouvons remarquer que Youtube n'a pas tendance à recommander des vidéos qui ont plus ou moins le même nombre de vues, contredisant la suggestion précédente. De plus, nous pouvons observer que le nombre de vues des vidéos à travers les trajets semblent plutôt rester stable voir augmenter plutôt que descendre. On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un nombre de sujets restreints.<p>
-			</div>
-		</div>
-		<div class="slide" data-anchor="Global-2">
-			<div class="content col-12">
-				<p>Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre analyse et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi des critères d'encloisonnement. Cette première visualisation nous permet de visualiser la durée des vidéos rencontrées durant les trajets pour les différents sujets de notre étude. </p>
-				<div class="col-12">
-					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_video_duration.html"></iframe>
+		<div class="section" data-anchor="Introduction">
+			<div class="slide" data-anchor="firstslide">
+				<div class="content col-12">
+					<img src="Capture.JPG" style="width:95%" class="img-tool">
 				</div>
-				<p>On peut remarquer un phénomène similaire au précédent où la durée de la vidéo reste stable voir augmente. On peut observer que la durée des vidéos varient moins souvent. Par contre, lorsque cette dernière varie, le changement est assez drastique et est très souvent vers une durée plus longue.</p>
 			</div>
-		</div>
-		<div class="slide" data-anchor="Global-3">
-			<div class="content col-12">
-				<p>Ici, nous présentons le nombre d'abonnés de la chaîne YouTube à travers les trajets.</p>
-				<div class="col-12">
-					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_sub.html"></iframe>
+			<div class="slide" data-anchor="secondslide">
+				<div class="content col-12">
+					<img src="Capture.JPG" style="width:95%" class="img-tool">
 				</div>
-				<p>Il est intéressant de remarquer que certaines chaînes sont très absorbantes. De notre côté, nous pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont on arrive pas à s'échapper. Dans nos données, au moins 3 trajets sont "enfermées" sur cette chaîne jusqu'à leur fin. A nouveau, cela limite les utilisateurs à une vue des sujets traités dans les vidéos propres au créateur de contenu de ces chaînes là. </p>
 			</div>
-		</div>
-	</div>
-	<div class="section" data-anchor="Topic">
-		<div class="slide" data-anchor="Topic-1">
-			<div class="content col-12">
-				<p>Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent Dirichlet Allocation</a> (LDA) afin de modéliser des topics sur les tags des vidéos. Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.</p>
-				<div id="wordcloud_div">
-					<select id="wordcloud" class="form-select col-5" onchange="changeWordcloud()">
-						<option value="1">Topic 1 : International Affairs on Nuclear</option>
-						<option value="2">Topic 2 : World News</option>
-						<option value="3">Topic 3 : Documentaries on World Crisis</option>
-						<option value="4">Topic 4 : News</option>
-						<option value="5">Topic 5 : Ukraine-Russia News</option>
-						<option value="6">Topic 6 : Ted Talks</option>
-						<option value="7">Topic 7 : Johnny Depp-Amber Heard</option>
-						<option value="8">Topic 8 : Health</option>
-						<option value="9">Topic 9 : White House</option>
-						<option value="10">Topic 10 : Music</option>
-						<option value="11">Topic 11 : Education</option>
-						<option value="12">Topic 12 : Politics</option>
-						<option value="13">Topic 13 : Noah Trevor</option>
-						<option value="14">Topic 14 : Morning News</option>
-						<option value="15">Topic 15 : Rathee Dhruv</option>
-					</select>
-					<h3 id="wordcloud_title">Topic 1 : International Affairs on Nuclear</h3>
-					<img src="images/word_cloud_topic_0.png" id="wordcloud_img">
+			<div class="slide" data-anchor="Introduction-1">
+				<div class="content col-12">
+					<h1>Introduction</h1>
+					<!-- explication de la problématique-->
+					Dans une ère où tout devient numérique, les influences de chaque individu se décuplent avec un accès
+					illimité à l'information. On pourrait s'attendre à ce que l'utilisateur ait tout contrôle sur
+					l'information qu'il consomme; ou alors, y a-t-il une force dont il n'a pas conscience qui influe ce
+					qu'il voit ? Lorsque l'on fait une recherche sur un navigateur web, les résultats affichés sont
+					contrôlés par l'algorithme de recommandations; ils sont donc, dans une certaine mesure, régis par le
+					propriétaire de l'algorithme. En effet, certains sites web investissent des sommes conséquentes afin
+					d'être mis en avant. Alors, l'accès à l'information ne nous fournit pas le résultat auquel on se
+					serait attendu. Cette approche de l'information peut être mise en parallèle avec les bulles de
+					filtres. Selon <a href="https://fr.wikipedia.org/wiki/Bulle_de_filtres">Pariser</a> , elles
+					désignent à la fois le filtrage de l'information qui parvient à l'internaute, et l'état d'«isolement
+					intellectuel» et culturel dans lequel il se retrouve lorsque les informations recherchées sur
+					Internet résultent d'une personnalisation mise en place à son insu. Dans notre cas nous allons nous
+					intéresser au cas spécifique des bulles de filtre au sein de YouTube. Spécifiquement, est-ce-que
+					YouTube nous enferme dans des bulles de filtre? Nous verrons alors si, à partir d'un utilisateur
+					lambda, nous arrivons à apercevoir une tendance de YouTube à nous proposer du contenu similaire en
+					fonction de ce que l'utilisateur à déjà regardé.
 				</div>
-				<p>Comme cette technique est basée sur du Machine Learning, elle n'est pas dépourvue de failles et certains mots pour lesquels l'algorithme trouve des similarités n'ont très peu, voir aucun, sens logique pour les humains. Nous pouvons voir des topics pour lesquels la classification des mots fonctionne très bien, comme par exemple le topic 7 qui a bien regroupé les mots Pirates des Caraïbes, Johnny Depp et Amber Heard à cause du procès actuellement en cours. Un autre example intéressant est le topic 5 qui contient tous les mots liés à la guerre Ukraine vs Russie qui fait rage.  On peut également trouver des exemples pour lesquels l'algorithme fonctionne moins bien, comme par exemple le topic 4 qui contient des mots avec des liens non-triviaux à trouver.</p>
+			</div>
+			<div class="slide" data-anchor="Introduction-2">
+				<div class="content col-12">
+					<!-- Buts des outils-->
+					<div style="text-align:center">
+						<img src="images/scheme1.jpg" style="width:40%" class="img-tool">
+					</div>
+					<h2>Outils et buts</h2>
+					<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles
+						de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une
+						boucle. Pour ce faire, nous avons développé un protocole d'expérience (décrit par la suite) dans
+						lequel nous nous laissons guider par l'algorithme de recommendations de YouTube et observons où
+						cela nous mène. </p>
+					<p>Sur ce site, nous proposons divers outils afin de pouvoir naviguer aisément parmi les données
+						récoltées. Tous les outils que nous vous proposons d'explorer sont intuitifs et intéractifs.</p>
+					<p>Dans nos expériences, nous avons utilisé le mot <b>topic</b> pour désigner les sujets auxquels on
+						s'intéresse. De la même manière, nous avons utilisé le mot <b>trajet</b> pour désigner un trajet
+						complet en se laissant guider par l'algorithme de recommendations YouTube.</p>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Introduction-3">
+				<div class="content col-12">
+					<!-- Explication du protocole -->
+					<div style="text-align:center">
+						<img src="images/scheme2.jpg" style="width:40%" class="img-tool">
+					</div>
+					<h2>Protocole d'expérience</h2>
+					Notre protocole d'expérience le plus récent fonctionne de la manière suivante:
+					<ul>
+						<li>Chaque jour, nous sélectionnons 5 sujets d'actualité différents sur le site <a
+								href="https://news.google.com">Google News</a></li>
+						<li>Pour chacun des sujets, nous faisons une recherche avec un utilisateur vierge et nous
+							sélectionnons 3 vidéos de départ différentes:
+							<ul>
+								<li>1 vidéo avec moins de 5'000 vues</li>
+								<li>1 vidéo entre 5'000 et 50'000 vues</li>
+								<li>1 vidéo avec plus de 50'000 vues</li>
+							</ul>
+						<li>Nous laissons ensuite nos trois utilisateurs (un par point de départ) naviguer en suivant
+							les recommendations durant 4 heures. Il est important de prêter attention aux choix
+							d'implémentation suivants:
+							<ul>
+								<li>L'utilisateur ne regarde aucun live YouTube.</li>
+								<Li>L'utilisateur regarde les vidéos pendant une durée maximale de 15 minutes.</Li>
+								<li>Lorsqu'il est temps de passer à la vidéo suivante, l'utilisateur choisit une des
+									vidéos proposées par l'algorithme en suivant une distribution de <a
+										href="https://fr.wikipedia.org/wiki/Loi_de_Poisson">Poisson</a> centrée entre la
+									2ème et la 3ème vidéo.</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Introduction-4">
+				<div class="content col-12">
+					<div style="text-align:center">
+						<img src="images/scheme3.jpg" style="width:30%" class="img-tool">
+					</div>
+					<h2>Réduction de données</h2>
+					Les données suivantes ont été collectées:
+					<ul>
+						<li>Titre</li>
+						<li>URL de la vidéo</li>
+						<li>URL (+nom) de la chaîne</li>
+						<li>Description</li>
+						<li>Tags</li>
+						<li>100 premiers commentaires (si pas désactivés)</li>
+						<ul>
+							<li>Posteur (nom + url)</li>
+							<li>Contenu (texte)</li>
+							<li>Likes (nombre)</li>
+						</ul>
+					</ul>
+					<p>Comme nous avons récolté un grand nombre de données, pour obtenir des visualisations pertinentes,
+						nous avons décidé de restreindre notre analyse à un sous-ensemble des données.
+						Nous avons fait les choix suivants:</p>
+					<ul>
+						<li>Comme nous prenons les titres des recherches sur un site de news, il arrive que durant
+							plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se
+							limiter à un ensemble de 3 trajets par sujet. Ceci a permis de diviser par 2.5 le nombre de
+							trajets.</li>
+						<li>Suite à cela, nous avons enlevé les vidéos pour lesquelles les tags n'étaient pas définis
+							(en effet nous avons besoin de ces derniers pour faire notre analyse) et avons uniquemment
+							gardé les trajets qui ont au moins 10 vidéos.</li>
+					</ul>
+				</div>
 			</div>
 		</div>
-		<div class="slide" data-anchor="Topic-2">
-			<div class="content col-12">
-				<p>Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regardé l'évolution de la distribution des vidéos dans les topics lorsque l'on avance dans le temps. LDA attribue une distribution de probabilités sur les topics pour chaque vidéo. Par la suite, nous avons attribué le topic avec la plus grande vidéo pour chaque vidéo comme étant son topic principal. Nous vous présentons à présent l'histogramme du nombre de vidéos par topic à chaque instant à travers les trajets. C'est à dire que nous montrons l'histogramme du nombre de vidéos par topic en ne considérant que les premières vidéos de chaque trajet, puis les secondes, puis les troisièmes, etc....</p>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_nb_topic_in_video.html"></iframe>
-				<p>Afin de démontrer l'existence de grosses bulles de filtres, nous aurions espérer qu'un ou plusieurs topics allaient accumuler un grand nombre de vidéos au fur et à mesure que le temps avance. Malheureusement, on peut voir que dans nos données on n'observe pas ce genre de comportements. Nous allons donc explorer plus en détails ce qui se passe dans chaque trajet dans la prochaine section du site afin de montrer si certains des topics sont réellement des bulles de filtres ou non.</p>
+		<div class="section" data-anchor="Global">
+			<div class="slide" data-anchor="Global-1">
+				<div class="content col-12">
+					<p>Nous commençons par vous montrer quelques visualisations sur notre récolte de données. Dans une
+						<a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0231703">étude</a>
+						réalisée précédemment, il a été suggéré que l'algorithme de recommendations YouTube a tendance à
+						nous recommander des vidéos qui ont toujours plus ou moins le même nombre de vues. Ayant déjà
+						remarqué cela au cours d'expériences personnelles, nous avons produit la visualisation suivante
+						afin de vérifier si cette suggestion était encore d'actualité. Cette visualisation représente le
+						nombre de vues à travers différents trajets.</p>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500"
+						allowfullscreen="true" src="viz/p5_nb_views.html"></iframe>
+					<p>A noter que l'axe des ordonnées est en échelle logarithmique, ce qui fait que les écarts sont
+						plus grand que ce qu'il n'y paraît. Néanmoins, selon nos données, nous pouvons remarquer que
+						Youtube n'a pas tendance à recommander des vidéos qui ont plus ou moins le même nombre de vues,
+						contredisant la suggestion précédente. De plus, nous pouvons observer que le nombre de vues des
+						vidéos à travers les trajets semblent plutôt rester stable voir augmenter plutôt que descendre.
+						On pourrait alors en déduire que YouTube, via son algorithme de recommandations, nous pousse
+						vers les contenus déjà populaires. Il s'en suit que la diversité du contenu se réduit de plus en
+						plus vers "ce qui marche le mieux" et indirectement la vision des internautes est limitée à un
+						nombre de sujets restreints.
+					<p>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Global-2">
+				<div class="content col-12">
+					<p>Comme nous avons un grand nombre de données à disposition, nous avons décidé de pousser notre
+						analyse et de voir si le nombre d'abonnés de la chaîne ainsi que la durée des vidéos sont aussi
+						des critères d'encloisonnement. Cette première visualisation nous permet de visualiser la durée
+						des vidéos rencontrées durant les trajets pour les différents sujets de notre étude. </p>
+					<div class="col-12">
+						<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500"
+							allowfullscreen="true" src="viz/p5_video_duration.html"></iframe>
+					</div>
+					<p>On peut remarquer un phénomène similaire au précédent où la durée de la vidéo reste stable voir
+						augmente. On peut observer que la durée des vidéos varie moins souvent. Par contre, lorsque
+						cette dernière varie, le changement est assez drastique et est très souvent dirigé vers une
+						durée plus longue.</p>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Global-3">
+				<div class="content col-12">
+					<p>Ici, nous présentons le nombre d'abonnés de la chaîne YouTube à travers les trajets.</p>
+					<div class="col-12">
+						<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500"
+							allowfullscreen="true" src="viz/p5_nb_sub.html"></iframe>
+					</div>
+					<p>Il est intéressant de remarquer que certaines chaînes sont très absorbantes. De notre côté, nous
+						pouvons voir que la chaîne <span style="font-style:italic;">TEDx Talk</span> est une chaîne dont
+						on arrive pas à s'échapper. Dans nos données, au moins 3 trajets se sont "enfermés" dans cette
+						chaîne jusqu'à leur fin. À nouveau, cela limite les utilisateurs à une vue des sujets traités
+						dans les vidéos propres au créateur de contenu de ces chaînes là. </p>
+				</div>
 			</div>
 		</div>
-		<div class="slide" data-anchor="Topic-3">
-			<div class="content col-12">
-				<p>Finalement, comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons décidé d'attribuer un topic à chaque trajet. Le topic choisi pour chaque trajet est simplement le sujet qui est le plus attribué aux vidéos dans cette trajet. En d'autres termes, le topic majoritaire dans les vidéos de cette trajet est attribuée à la trajet. Avec cette nouvelle donnée, nous pouvons construire un histogramme du nombre de trajets par vidéo. </p>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
-				<p>Si certains sujets se démarque clairement des autres en termes du nombre d'attributions aux parcours, cela suggère que ce sujet  est relativement absorbant, i.e. un utilisateur a tendance à consommer beaucoup de contenus traitant de ce topic. Dans notre cas, nous pouvons observer que le sujet de la santé est particulièrement présent tandis que d'autres comme Ukraine-Russie le sont beaucoup moins.</p>
+		<div class="section" data-anchor="Topic">
+			<div class="slide" data-anchor="Topic-1">
+				<div class="content col-12">
+					<p>Après la récolte de données, nous sommes maintenant en mesure de faire l'analyse. Nous avons
+						utilisé l'algorithme <a href="https://en.wikipedia.org/wiki/Latent_Dirichlet_allocation">Latent
+							Dirichlet Allocation</a> (LDA) afin de modéliser des topics sur les tags des vidéos.
+						Intuitivement, les tags qui ont un sens similaire sont censés être placés dans le même topic par
+						l'algorithme. Une analyse humaine permettra ensuite de définir ce que représente le topic. Nous
+						vous proposons de commencer par voir les différents mots qui étaient présents dans chacun des
+						topics et le nom que nous avons donné au topic. Grâce à la liste déroulante ci-dessous, vous
+						pourrez observer les 15 mots les plus représentatifs de chaque cluster selon l'algorithme.</p>
+					<div id="wordcloud_div">
+						<select id="wordcloud" class="form-select col-5" onchange="changeWordcloud()">
+							<option value="1">Topic 1 : International Affairs on Nuclear</option>
+							<option value="2">Topic 2 : World News</option>
+							<option value="3">Topic 3 : Documentaries on World Crisis</option>
+							<option value="4">Topic 4 : News</option>
+							<option value="5">Topic 5 : Ukraine-Russia News</option>
+							<option value="6">Topic 6 : Ted Talks</option>
+							<option value="7">Topic 7 : Johnny Depp-Amber Heard</option>
+							<option value="8">Topic 8 : Health</option>
+							<option value="9">Topic 9 : White House</option>
+							<option value="10">Topic 10 : Music</option>
+							<option value="11">Topic 11 : Education</option>
+							<option value="12">Topic 12 : Politics</option>
+							<option value="13">Topic 13 : Noah Trevor</option>
+							<option value="14">Topic 14 : Morning News</option>
+							<option value="15">Topic 15 : Rathee Dhruv</option>
+						</select>
+						<h3 id="wordcloud_title">Topic 1 : International Affairs on Nuclear</h3>
+						<img src="images/word_cloud_topic_0.png" id="wordcloud_img">
+					</div>
+					<p>Comme cette technique est basée sur du Machine Learning, elle n'est pas dépourvue de failles et
+						certains mots pour lesquels l'algorithme trouve des similarités n'ont très peu, voir aucun, sens
+						logique pour les humains. Nous pouvons voir des topics pour lesquels la classification des mots
+						fonctionne très bien, comme par exemple le topic 7 qui a bien regroupé les mots Pirates des
+						Caraïbes, Johnny Depp et Amber Heard à cause du <a
+							href="https://fr.wikipedia.org/wiki/Bataille_judiciaire_entre_Johnny_Depp_et_Amber_Heard">procès</a>
+						actuellement en cours. Un autre example intéressant est le topic 5 qui contient tous les mots
+						liés au <a href="https://fr.wikipedia.org/wiki/Conflit_russo-ukrainien">conflit
+							russo-ukrainien</a> qui fait rage. On peut également trouver des exemples pour lesquels
+						l'algorithme fonctionne moins bien, comme par exemple le topic 4 qui contient des mots avec des
+						liens non-triviaux à trouver.</p>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Topic-2">
+				<div class="content col-12">
+					<p>Maintenant que nous avons une idée de contenu de chaque topic, nous pouvons regarder l'évolution
+						de la distribution des vidéos dans les topics lorsque l'on avance dans le temps. LDA attribue
+						une distribution de probabilités sur les topics pour chaque vidéo. Par la suite, nous avons
+						attribué le topic avec la plus grande probabilité comme étant le topic principal de la vidéo.
+						Nous vous présentons à présent l'histogramme du nombre de vidéos par topic à chaque instant à
+						travers les trajets. C'est à dire que nous montrons l'histogramme du nombre de vidéos par topic
+						en ne considérant que les premières vidéos de chaque trajet, puis les secondes, puis les
+						troisièmes, etc....</p>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600"
+						allowfullscreen="true" src="viz/p5_nb_topic_in_video.html"></iframe>
+					<p>Afin de démontrer l'existence de grosses bulles de filtres, nous aurions espérer qu'un ou
+						plusieurs topics allaient accumuler un grand nombre de vidéos au fur et à mesure que le temps
+						avance. Malheureusement, on peut voir que dans nos données on n'observe pas ce genre de
+						comportements. Nous allons donc explorer plus en détails ce qui se passe dans chaque trajet dans
+						la prochaine section du site afin de montrer si certains des topics sont réellement des bulles
+						de filtres ou non.</p>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Topic-3">
+				<div class="content col-12">
+					<p>Comme nous nous intéressons aux bulles de filtres que YouTube possèdent probablement, nous avons
+						décidé d'attribuer un topic à chaque trajet. Le topic choisi pour chaque trajet est simplement
+						le sujet qui est le plus attribué aux vidéos dans ce trajet. En d'autres termes, le topic
+						majoritaire dans les vidéos de ce trajet est attribuée à celui-ci. Avec cette nouvelle donnée,
+						nous pouvons construire un histogramme du nombre de trajets par topic. </p>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500"
+						allowfullscreen="true" src="viz/p5_nb_run_per_topic.html"></iframe>
+					<p>Si certains sujets se démarque clairement des autres en termes du nombre d'attributions aux
+						parcours, cela suggère que ce sujet est relativement absorbant, i.e. un utilisateur a tendance à
+						consommer beaucoup de contenus traitant de ce topic. Dans notre cas, nous pouvons observer que
+						le sujet de la santé est particulièrement présent tandis que d'autres comme Ukraine-Russie le
+						sont beaucoup moins.</p>
+				</div>
+			</div>
+			<div class="slide" data-anchor="Topic-4">
+				<div class="content col-12">
+					<p>
+						Afin de visuellement vérifier si des sujets sont des bulles ou non, c'est-à-dire des sujets dont
+						on a du mal à a se sort, nous vous proposons à présent l'outil suivant:
+					</p>
+					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500"
+						allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
+					<p>(<span style="font-style:italic;"> Il est possible de scroller dans la visualisation</span>)
+						Chacune des lignes sur l'ordonnée correspond à un parcours, avec le thème de base ainsi que la
+						catégorie du nombres de vues de la vidéo de départ. L'abscisse correspond à la posistion de la
+						vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic
+						attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des
+						vidéos au fur et à mesures d'une trajet. Nous pouvons observer que pour certains parcours, par
+						exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives.
+						Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient
+						pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.</p>
+				</div>
 			</div>
 		</div>
-		<div class="slide" data-anchor="Topic-4">
-			<div class="content col-12">
-				<p>
-					Afin de visuellement vérifier si des sujets sont des bulles ou non, c'est-à-dire des sujets dont on a du mal à a se sort, on vous propose à présent l'outil suivant:
-				</p>
-				<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="500" allowfullscreen="true" src="viz/p5_best_topic_per_video.html"></iframe>
-				<p>(<span style="font-style:italic;"> Il est possible de scroller dans la visualisation</span>) Chacune des lignes sur l'axe y correspond à un parcours, avec le thème de base ainsi que la catégorie du nombres de vues de la vidéo de départ. L'axe des x correspond à la posistion de la vidéo dans le parcours. Pour un parcours donné, la couleur affichée est la couleur du topic attribué à cette vidéo. De cette manière cette figure nous permet de voir comment les topics des vidéos au fur et à mesures d'une trajet. Nous pouvons observer que pour certains parcours, par exemple "3 American Bahamas", le même topic est visité durant plusieurs vidéos consécutives. Certains topics sont manquant, ceci est dû au fait que les vidéos correspondantes ne contenaient pas de tags. Nous ne pouvons donc pas les traiter avec notre modèle.</p>
-			</div>
-		</div>
-	</div>
-	
-	<div class="section" data-anchor="Navtrajet">
-		<div class="slide" data-anchor="Navtrajet-1">
-			<div class="content col-12">
-				<p>Nous concluons cette exploration interactive avec une visualisation un peu plus complexe à comprendre. Pour des questions de visualisations, nous avons projeté les vecteurs de probabilités des vidéos dans un espace en 2 dimensions avec <a href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a>. Grâce à cela, nous sommes en mesures de visualiser comment un trajet se déplace dans l'espace des vidéos. Intuitivement, si celui-ci ne bouge pas beaucoup, cela veut dire que la trajet reste bloquée dans un certain topic et que nous pouvons considéré ce topic comme une bulle de filtre comme il est très dur d'en sortir. Dans la visualisation ci-dessous, nous montrons simultanémenet les 3 départs différents pour un sujet recherché. Grâce à cela, il nous sera possible de voir si les vidéos plus ou moins vues ont tendance à rester bloquer dans des bulles de filtres ou non. </p>
-				<div style="text-align: center;display:inline-block;" class="col-12 col-lg-6">
-					<select id="displayrun" class="form-select" onchange="changeDisplayRun()">
-						<option value="3_Americans_Bahamas">3 Americans Bahamas</option>
-						<option value="Biden_First_Jill_Ukraine">Biden First Jill Ukraine</option>
-						<option value="Beijing_Hong_John_Kong's_Lee">Beijing Hong John Kong's Le</option>
-						<option value="Break_Forces_Mariupol_Resistance_Russian_To_Try_Ukrainian">Break Forces Mariupol Resistance Russian To Try Ukrainian</option>
-						<option value="Charles_Opening_Parliament_Queen's_Takes_of">Charles Opening Parliament Queen's Takes of</option>
-						<option value="EU_Russian">EU Russian</option>
-						<option value="Korea_North">Korea North</option>
-						<option value="Mariupol_Zaporizhzhia">Mariupol Zaporizhzhia</option>
-						<option value="Russia">Russia</option>
-					</select>
 
-					<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600" allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3_Americans_Bahamas.html" id="explore"></iframe>
-				</div>
-				<div class="col-12 col-lg-5" style="display:inline-block;">
-				<p>Il est également possible de changer le sujet de recherche et de voir la convergence des trajets pour différents sujets. Grâce à cet outil, nous sommes en mesure de visualiser si un des trajet que l'on considère reste bloquer dans un topic (un nuage de points très compact). En naviguant à travers les trajets, on peut vori que la plupart des simulations visitent un certains nombre (par exemple 4 ou 5) de topics et ensuite oscillent entre à l'intéreur de ce nombre restreints de topics. Il est vraiment difficile de voir un comportement dans lequel un trajet est complètement bloqué dans un et un seul sujet. <br>
-				Dans le thème "3 Americans Bahamas", on peut observer que le trajet qui part avec des vidéos avec plus de 50'000 vues (orange) reste bloqué un long moment dans un seul topic, mais c'est un des seuls parcours pour lequel nous pouvons observer ce phéonomène. Néanmoins, il semblerait qu'il s'agisse des trajets commençant par une vidéo avec moins de 5'000 vues (bleu) qui oscillent entre 3-4 topics durant la durée entière du parcours. </p>
+		<div class="section" data-anchor="Navtrajet">
+			<div class="slide" data-anchor="Navtrajet-1">
+				<div class="content col-12">
+					<p>Nous concluons cette exploration interactive avec une visualisation un peu plus complexe à
+						comprendre. Pour des questions de visualisations, nous avons projeté les vecteurs de
+						probabilités des vidéos dans un espace en 2 dimensions avec <a
+							href="https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding">TSNE</a>.
+						Grâce à cela, nous sommes en mesures de visualiser comment un trajet se déplace dans l'espace
+						des vidéos. Intuitivement, si celui-ci ne bouge pas beaucoup, cela veut dire que la trajet reste
+						bloquée dans un certain topic et que nous pouvons considéré ce topic comme une bulle de filtre
+						comme il est très dur d'en sortir. Dans la visualisation ci-dessous, nous montrons
+						simultanémenet les 3 départs différents pour un sujet recherché. Grâce à cela, il nous sera
+						possible de voir si les vidéos plus ou moins vues ont tendance à rester bloquer dans des bulles
+						de filtres ou non. </p>
+					<div style="text-align: center;display:inline-block;" class="col-12 col-lg-6">
+						<select id="displayrun" class="form-select" onchange="changeDisplayRun()">
+							<option value="3_Americans_Bahamas">3 Americans Bahamas</option>
+							<option value="Biden_First_Jill_Ukraine">Biden First Jill Ukraine</option>
+							<option value="Beijing_Hong_John_Kong's_Lee">Beijing Hong John Kong's Le</option>
+							<option value="Break_Forces_Mariupol_Resistance_Russian_To_Try_Ukrainian">Break Forces
+								Mariupol Resistance Russian To Try Ukrainian</option>
+							<option value="Charles_Opening_Parliament_Queen's_Takes_of">Charles Opening Parliament
+								Queen's Takes of</option>
+							<option value="EU_Russian">EU Russian</option>
+							<option value="Korea_North">Korea North</option>
+							<option value="Mariupol_Zaporizhzhia">Mariupol Zaporizhzhia</option>
+							<option value="Russia">Russia</option>
+						</select>
+
+						<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="100%" height="600"
+							allowfullscreen="true" src="viz/p5_category_first_video_theme_0:3_Americans_Bahamas.html"
+							id="explore"></iframe>
+					</div>
+					<div class="col-12 col-lg-5" style="display:inline-block;">
+						<p>Il est également possible de changer le sujet de recherche et de voir la convergence des
+							trajets pour différents sujets. Grâce à cet outil, nous sommes en mesure de visualiser si un
+							des trajet que l'on considère reste bloquer dans un topic (un nuage de points très compact).
+							En naviguant à travers les trajets, on peut voir que la plupart des simulations visitent un
+							certains nombre (par exemple 4 ou 5) de topics et ensuite oscillent l'intéreur de ce nombre
+							restreints de topics. Il est vraiment difficile de voir un comportement dans lequel un
+							trajet est complètement bloqué dans un et un seul sujet. <br>
+							Dans le thème "3 Americans Bahamas", on peut observer que le trajet qui part avec des vidéos
+							avec plus de 50'000 vues (orange) reste bloqué un long moment dans un seul topic, mais c'est
+							un des seuls parcours pour lequel nous pouvons observer ce phéonomène. Néanmoins, il
+							semblerait qu'il s'agisse des trajets commençant par une vidéo avec moins de 5'000 vues
+							(bleu) qui oscillent entre 3-4 topics durant la durée entière du parcours. </p>
+					</div>
 				</div>
 			</div>
 		</div>
-	</div>
 
-	<div class="section" data-anchor="Conclusion">
-		<div class="slide" data-anchor="Conclusion-1">
-			Pour conclure, nous avons pu remarqué au travers de cette analyse que le terme <a href="https://fr.wikipedia.org/wiki/Bulle_de_filtres">bulle de filtres</a> comme défini par Pariser est peut être un peu fort pour ce que nous observons. 
-			<p>En particulier, Pariser a mentionné trois dynamiques présentes dans les bulles de filtres, que nous allons maintenant analyser.</p>
-			
-			<!-- Dans notre expérience, nous avons remarqué que des bulles étaient clairement et que nous pouvons tourné un certain temps dans le même sujet. 
+		<div class="section" data-anchor="Conclusion">
+			<div class="slide" data-anchor="Conclusion-1">
+				Pour conclure, nous avons pu remarqué au travers de cette analyse que le terme <a
+					href="https://fr.wikipedia.org/wiki/Bulle_de_filtres">bulle de filtres</a> comme défini par Pariser
+				est peut être un peu fort pour ce que nous observons.
+				<p>En particulier, Pariser a mentionné trois dynamiques présentes dans les bulles de filtres, que nous
+					allons maintenant analyser.</p>
+
+				<!-- Dans notre expérience, nous avons remarqué que des bulles étaient clairement et que nous pouvons tourné un certain temps dans le même sujet. 
 			Par contre, nous avons clairement pu remarqué la présence de bulle autour de certains sujets. 
 			Mais nous arrivons quasiment toujours à nous échapper ces sujets.<br><br>
-			Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la récolte, cleaning et traitement de données. Cela nous aura aussi de rajouter de l'expérience en terme de visualisations. De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de YouTube de façon automatisée. Pour se faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations des données sur deux GitHub différents: <a href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>
+			Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la récolte, cleaning et traitement de données. Cela nous aura aussi de rajouter de l'expérience en terme de visualisations. De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de YouTube de façon automatisée. Pour ce faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations des données sur deux GitHub différents: <a href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>
 			-->
 
-		</div>
-		<div class="slide" data-anchor="Conclusion-2">
-			<h1>Isolation</h1>
-			De par sa personnalisation, une bulle est unique à chacun.
+			</div>
+			<div class="slide" data-anchor="Conclusion-2">
+				<h1>Isolation</h1>
+				De par sa personnalisation, une bulle est unique à chacun.
 
-			<p>Dans nos expériences, les bulles que nous observons sont certes variées, mais certains des sujets à leur coeur se retrouve dans plusieurs d'entre elles.</p>
-		</div>
-		<div class="slide" data-anchor="Conclusion-3">
-			<h1>Invisibilité</h1>
-			La bulle se conforme à l'image qu'elle a de vous, mais ne vous dit pas quelle est cette image.
+				<p>Dans nos expériences, les bulles que nous observons sont certes variées, mais certains des sujets à
+					leur coeur se retrouvent dans plusieurs d'entre elles.</p>
+			</div>
+			<div class="slide" data-anchor="Conclusion-3">
+				<h1>Invisibilité</h1>
+				La bulle se conforme à l'image qu'elle a de vous, mais ne vous dit pas quelle est cette image.
 
-			<p>Les comportements que nous pourrions désigner comme "bulles" restent généralement assez visibles. En revanche, on retrouve l'idée que l'on se retrouve tout de même enfermé dans une image que YouTube a de l'utilisateur, image qu'il n'a pas choisi.</p>
-		</div>
-		<div class="slide" data-anchor="Conclusion-4">
-			<h1>Non-choix</h1>
-			On ne décide pas d'entrer dans la bulle, elle vient à nous.
+				<p>Les comportements que nous pourrions désigner comme "bulles" restent généralement assez visibles. En
+					revanche, on retrouve l'idée que l'on est tout de même enfermé dans une image que YouTube a de
+					l'utilisateur, image qu'il n'a pas choisi.</p>
+			</div>
+			<div class="slide" data-anchor="Conclusion-4">
+				<h1>Non-choix</h1>
+				On ne décide pas d'entrer dans la bulle, elle vient à nous.
 
-			<p>Notre crawler se contente de naviguer les vidéos proposées; il ne possède aucune logique qui essaierait volontairement de se retrouver enfermé.</p>
-		</div>
-		<div class="slide" data-anchor="Conclusion-5">
-			En conclusion, nous observons un phénomène que nous pouvons intuitivement appeler un bulle: 
-			une fois dedans, tout ce qui est recommandé se ressemble.
+				<p>Notre crawler se contente de naviguer les vidéos proposées; il ne possède aucune logique qui
+					essaierait volontairement de se retrouver enfermé.</p>
+			</div>
+			<div class="slide" data-anchor="Conclusion-5">
+				En conclusion, nous observons un phénomène que nous pouvons intuitivement appeler un bulle:
+				une fois dedans, tout ce qui est recommandé se ressemble.
 
-			<p>Toutes les dynamiques des bulles de filtres apparraissent aussi, mais dans une forme diluée, moins tranchée</p>
+				<p>Toutes les dynamiques des bulles de filtres apparraissent aussi, mais dans une forme diluée, moins
+					tranchée</p>
 
-			<br>
-			<br>
-			Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la récolte, cleaning et traitement de données. 
-			Cela nous aura aussi de rajouter de l'expérience en terme de visualisations. 
-			De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de YouTube de façon automatisée. 
-			Pour ce faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations des données sur des dépôts GitHub: <a href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>.
+				<br>
+				<br>
+				Finalement, ce travail nous aura permis de se faire une expérience pratique dans le domaine de la
+				récolte, nettoyage et traitement de données.
+				Cela nous aura aussi permis de gagner de l'expérience en terme de visualisations et de refléxion
+				critique par rapport à des données.
+				De plus, ce travail constitue un solide point de départ à toute personne voulant visiter l'univers de
+				YouTube de manière automatisée.
+				Pour ce faire, nous mettons à disposition tous nos outils de récolte, d'analyses et de visualisations
+				des données sur des dépôts GitHub: <a
+					href="https://github.com/SHS-Critical-Data-Studies/yt-crawler">Récolte</a> et <a
+					href="https://github.com/SHS-Critical-Data-Studies/SHS-YouTube-Project">Analyse</a>.
+			</div>
 		</div>
 	</div>
-</div>
 
-<script>
-$(document).ready(function(){
-	$('#wrapper').fullpage({
-		anchors: ['Titre', 'Introduction', 'Global','Topic', 'Navtrajet','NavCluster','About'],
-        sectionsColor: ['rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)'],
-        slidesNavigation: true,
-		navigationPosition:"right",
-		autoScrolling: true,
-		  navigation: true,
-		  showActiveTooltip: true,
-		  slidesNavigation:true,
-		  slidesNavPosition:"bottom",
-		  fitToSection:true,
-		  navigationTooltips: [
-        "Accueil",
-        "Introduction",
-        "Stats globals",
-        "Exploration des topics",
-        "Exploration des trajets",
-        "Conclusion",
-        "About",
-      ],
-      controlArrows:false, 
-      showActiveTooltip:false
-	})
-})
-</script>
-<script src="js/custom.js"></script>
+	<script>
+		$(document).ready(function () {
+			$('#wrapper').fullpage({
+				anchors: ['Titre', 'Introduction', 'Global', 'Topic', 'Navtrajet', 'NavCluster', 'About'],
+				sectionsColor: ['rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)', 'rgb(234,234,234)'],
+				slidesNavigation: true,
+				navigationPosition: "right",
+				autoScrolling: true,
+				navigation: true,
+				showActiveTooltip: true,
+				slidesNavigation: true,
+				slidesNavPosition: "bottom",
+				fitToSection: true,
+				navigationTooltips: [
+					"Accueil",
+					"Introduction",
+					"Stats globals",
+					"Exploration des topics",
+					"Exploration des trajets",
+					"Conclusion",
+					"About",
+				],
+				controlArrows: false,
+				showActiveTooltip: false
+			})
+		})
+	</script>
+	<script src="js/custom.js"></script>
 </body>
+
 </html>
