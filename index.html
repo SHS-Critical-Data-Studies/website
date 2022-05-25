@@ -66,25 +66,6 @@
 					fonction de ce que l'utilisateur à déjà regardé.
 				</div>
 			</div>
-			<div class="slide" data-anchor="Introduction-2">
-				<div class="content col-12">
-					<!-- Buts des outils-->
-					<div style="text-align:center">
-						<img src="images/scheme1.jpg" style="width:40%" class="img-tool">
-					</div>
-					<h2>Outils et buts</h2>
-					<p>Comme expliqué dans l'introduction, notre but est d'essayer de démontrer l'existence des bulles
-						de filtre sur YouTube et de voir si certains sujets sont plus à même de nous bloquer dans une
-						boucle. Pour ce faire, nous avons développé un protocole d'expérience (décrit par la suite) dans
-						lequel nous nous laissons guider par l'algorithme de recommendations de YouTube et observons où
-						cela nous mène. </p>
-					<p>Sur ce site, nous proposons divers outils afin de pouvoir naviguer aisément parmi les données
-						récoltées. Tous les outils que nous vous proposons d'explorer sont intuitifs et intéractifs.</p>
-					<p>Dans nos expériences, nous avons utilisé le mot <b>topic</b> pour désigner les sujets auxquels on
-						s'intéresse. De la même manière, nous avons utilisé le mot <b>trajet</b> pour désigner un trajet
-						complet en se laissant guider par l'algorithme de recommendations YouTube.</p>
-				</div>
-			</div>
 			<div class="slide" data-anchor="Introduction-3">
 				<div class="content col-12">
 					<!-- Explication du protocole -->
@@ -115,40 +96,6 @@
 									2ème et la 3ème vidéo.</li>
 							</ul>
 						</li>
-					</ul>
-				</div>
-			</div>
-			<div class="slide" data-anchor="Introduction-4">
-				<div class="content col-12">
-					<div style="text-align:center">
-						<img src="images/scheme3.jpg" style="width:30%" class="img-tool">
-					</div>
-					<h2>Réduction de données</h2>
-					Les données suivantes ont été collectées:
-					<ul>
-						<li>Titre</li>
-						<li>URL de la vidéo</li>
-						<li>URL (+nom) de la chaîne</li>
-						<li>Description</li>
-						<li>Tags</li>
-						<li>100 premiers commentaires (si pas désactivés)</li>
-						<ul>
-							<li>Posteur (nom + url)</li>
-							<li>Contenu (texte)</li>
-							<li>Likes (nombre)</li>
-						</ul>
-					</ul>
-					<p>Comme nous avons récolté un grand nombre de données, pour obtenir des visualisations pertinentes,
-						nous avons décidé de restreindre notre analyse à un sous-ensemble des données.
-						Nous avons fait les choix suivants:</p>
-					<ul>
-						<li>Comme nous prenons les titres des recherches sur un site de news, il arrive que durant
-							plusieurs jours d'affilés, les mêmes sujets fassent les gros titres. Nous avons décidé de se
-							limiter à un ensemble de 3 trajets par sujet. Ceci a permis de diviser par 2.5 le nombre de
-							trajets.</li>
-						<li>Suite à cela, nous avons enlevé les vidéos pour lesquelles les tags n'étaient pas définis
-							(en effet nous avons besoin de ces derniers pour faire notre analyse) et avons uniquemment
-							gardé les trajets qui ont au moins 10 vidéos.</li>
 					</ul>
 				</div>
 			</div>
